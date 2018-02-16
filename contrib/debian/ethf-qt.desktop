@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Ethf
+Comment=Ethf P2P Cryptocurrency
+Comment[fr]=Ethf, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Ethf, eşten eşe kriptografik sanal para birimi
+Exec=ethf-qt %u
+Terminal=false
+Type=Application
+Icon=ethf128
+MimeType=x-scheme-handler/ethf;
+Categories=Office;Finance;

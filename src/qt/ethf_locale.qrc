@@ -1,0 +1,28 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/ethf_bg.qm</file>
+        <file alias="ca">locale/ethf_ca.qm</file>
+        <file alias="cs">locale/ethf_cs.qm</file>
+        <file alias="da">locale/ethf_da.qm</file>
+        <file alias="de">locale/ethf_de.qm</file>
+        <file alias="en">locale/ethf_en.qm</file>
+        <file alias="en_US">locale/ethf_en_US.qm</file>
+        <file alias="es">locale/ethf_es.qm</file>
+        <file alias="fi">locale/ethf_fi.qm</file>
+        <file alias="fr_FR">locale/ethf_fr_FR.qm</file>
+        <file alias="it">locale/ethf_it.qm</file>
+        <file alias="ja">locale/ethf_ja.qm</file>
+        <file alias="ko_KR">locale/ethf_ko_KR.qm</file>
+        <file alias="nl">locale/ethf_nl.qm</file>
+        <file alias="pl">locale/ethf_pl.qm</file>
+        <file alias="pt">locale/ethf_pt.qm</file>
+        <file alias="pt_BR">locale/ethf_pt_BR.qm</file>
+        <file alias="ro_RO">locale/ethf_ro_RO.qm</file>
+        <file alias="ru">locale/ethf_ru.qm</file>
+        <file alias="sk">locale/ethf_sk.qm</file>
+        <file alias="sv">locale/ethf_sv.qm</file>
+        <file alias="uk">locale/ethf_uk.qm</file>
+        <file alias="zh_CN">locale/ethf_zh_CN.qm</file>
+        <file alias="zh_TW">locale/ethf_zh_TW.qm</file>
+    </qresource>
+</RCC>

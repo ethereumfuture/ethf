@@ -1,0 +1,26 @@
+[Unit]
+Description=Ethf's distributed currency daemon
+After=network.target
+
+[Service]
+User=ethf
+Group=ethf
+
+Type=forking
+PIDFile=/var/lib/ethfd/ethfd.pid
+
+ExecStart=/usr/bin/ethfd -daemon -pid=/var/lib/ethfd/ethfd.pid \
+          -conf=/etc/ethf/ethf.conf -datadir=/var/lib/ethfd
+
+ExecStop=-/usr/bin/ethf-cli -conf=/etc/ethf/ethf.conf \
+         -datadir=/var/lib/ethfd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
