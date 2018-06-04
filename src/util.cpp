@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Ethf developers
+// Copyright (c) 2017-2018 The ETHF developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -106,7 +106,7 @@ std::string to_internal(const std::string&);
 
 using namespace std;
 
-//Ethf only features
+//ETHF only features
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
 string strMasterNodeAddr = "";
@@ -232,7 +232,7 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "ethf" is a composite category enabling all Ethf-related debug output
+            // "ethf" is a composite category enabling all ETHF-related debug output
             if (ptrCategory->count(string("ethf"))) {
                 ptrCategory->insert(string("obfuscation"));
                 ptrCategory->insert(string("swifttx"));
@@ -289,19 +289,21 @@ int LogPrintStr(const std::string& str)
     return ret;
 }
 
+/** Interpret string as boolean, for argument parsing */
 static bool InterpretBool(const std::string& strValue)
 {
-	if (strValue.empty())
-		return true;
-	return (atoi(strValue) != 0);
+    if (strValue.empty())
+        return true;
+    return (atoi(strValue) != 0);
 }
 
+/** Turn -noX into -X=0 */
 static void InterpretNegativeSetting(std::string& strKey, std::string& strValue)
 {
-	if (strKey.length()>3 && strKey[0]=='-' && strKey[1]=='n' && strKey[2]=='o') {
-		strKey = "-" + strKey.substr(3);
-		strValue = InterpretBool(strValue) ? "0" : "1";
-	}
+    if (strKey.length()>3 && strKey[0]=='-' && strKey[1]=='n' && strKey[2]=='o') {
+        strKey = "-" + strKey.substr(3);
+        strValue = InterpretBool(strValue) ? "0" : "1";
+    }
 }
 
 void ParseParameters(int argc, const char* const argv[])
@@ -330,12 +332,11 @@ void ParseParameters(int argc, const char* const argv[])
         // If both --foo and -foo are set, the last takes effect.
         if (str.length() > 1 && str[1] == '-')
             str = str.substr(1);
-	InterpretNegativeSetting(str, strValue);
+        InterpretNegativeSetting(str, strValue);
 
         mapArgs[str] = strValue;
         mapMultiArgs[str].push_back(strValue);
     }
-
 }
 
 std::string GetArg(const std::string& strArg, const std::string& strDefault)
@@ -347,16 +348,16 @@ std::string GetArg(const std::string& strArg, const std::string& strDefault)
 
 int64_t GetArg(const std::string& strArg, int64_t nDefault)
 {
-	if (mapArgs.count(strArg))
-		return atoi64(mapArgs[strArg]);
-	return nDefault;
+    if (mapArgs.count(strArg))
+        return atoi64(mapArgs[strArg]);
+    return nDefault;
 }
 
 bool GetBoolArg(const std::string& strArg, bool fDefault)
 {
-	if (mapArgs.count(strArg))
-		return InterpretBool(mapArgs[strArg]);
-	return fDefault;
+    if (mapArgs.count(strArg))
+        return InterpretBool(mapArgs[strArg]);
+    return fDefault;
 }
 
 bool SoftSetArg(const std::string& strArg, const std::string& strValue)
@@ -417,13 +418,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\Ethf
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\Ethf
-// Mac: ~/Library/Application Support/Ethf
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\ETHF
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\ETHF
+// Mac: ~/Library/Application Support/ETHF
 // Unix: ~/.ethf
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Ethf";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "ETHF";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -435,7 +436,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "Ethf";
+    return pathRet / "ETHF";
 #else
     // Unix
     return pathRet / ".ethf";
@@ -517,12 +518,11 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it) {
         // Don't overwrite existing settings so command line settings override ethf.conf
         string strKey = string("-") + it->string_key;
-    	string strValue = it->value[0];
-	InterpretNegativeSetting(strKey, strValue);
-	if (mapSettingsRet.count(strKey) == 0)
-		mapSettingsRet[strKey] = strValue;
-	mapMultiSettingsRet[strKey].push_back(strValue);
-
+        string strValue = it->value[0];
+        InterpretNegativeSetting(strKey, strValue);
+        if (mapSettingsRet.count(strKey) == 0)
+            mapSettingsRet[strKey] = strValue;
+        mapMultiSettingsRet[strKey].push_back(strValue);
     }
     // If datadir is changed in .conf file:
     ClearDatadirCache();

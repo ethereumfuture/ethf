@@ -354,12 +354,12 @@
         <translation>A&amp;juda</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
-        <source>&amp;About Ethereum Future Core</source>
-        <translation>&amp;Sobre Ethereum Future Core</translation>
+        <source>&amp;About ETHF Core</source>
+        <translation>&amp;Sobre ETHF Core</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -552,12 +552,12 @@
         <translation>versió</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
-        <source>About Ethereum Future Core</source>
-        <translation>Sobre Ethereum Future Core</translation>
+        <source>About ETHF Core</source>
+        <translation>Sobre ETHF Core</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -575,12 +575,12 @@
         <translation>Benvingut</translation>
     </message>
     <message>
-        <source>Welcome to Ethereum Future Core.</source>
-        <translation>Benvingut a Ethereum Future Core.</translation>
+        <source>Welcome to ETHF Core.</source>
+        <translation>Benvingut a ETHF Core.</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1132,8 +1132,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -1292,7 +1292,7 @@
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     <message>
         <source>Error</source>
         <translation>Error</translation>

@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Ethf developers
+// Copyright (c) 2017-2018 The ETHF developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -493,7 +493,7 @@ void OverviewPage::toggleObfuscation()
         settings.setValue("hasMixed", "hasMixed");
     }
     if (!fEnableObfuscation) {
-        int64_t balance = currentBalance;
+        CAmount balance = currentBalance;
         float minAmount = 14.90 * COIN;
         if (balance < minAmount) {
             QString strMinAmount(BitcoinUnits::formatWithUnit(nDisplayUnit, minAmount));

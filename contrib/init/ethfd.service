@@ -1,5 +1,5 @@
 [Unit]
-Description=Ethf's distributed currency daemon
+Description=ETHF's distributed currency daemon
 After=network.target
 
 [Service]

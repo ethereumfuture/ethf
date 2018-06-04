@@ -1,17 +1,13 @@
 Gitian building
 ================
 
-*Setup instructions for a gitian build of Ethf using a Debian VM or physical system.*
+*Setup instructions for a gitian build of ETHF using a Debian VM or physical system.*
 
-Gitian is the deterministic build process that is used to build the Ethf
+Gitian is the deterministic build process that is used to build the ETHF
 Core executables. It provides a way to be reasonably sure that the
 executables are really built from source on GitHub. It also makes sure that
 the same, tested dependencies are used and statically built into the executable.
 
-Multiple developers build the source code by following a specific descriptor
-("recipe"), cryptographically sign the result, and upload the resulting signature.
-These results are compared and only if they match, the build is accepted and uploaded
-to ethereumfuture.net.
 
 More independent gitian builders are needed, which is why I wrote this
 guide. It is preferred to follow these steps yourself instead of using someone else's
@@ -26,7 +22,7 @@ Table of Contents
 - [Installing gitian](#installing-gitian)
 - [Setting up gitian images](#setting-up-gitian-images)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building Ethf](#building-ethf)
+- [Building ETHF](#building-ethf)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -326,10 +322,10 @@ under 'Fetch and build inputs' to install sources which require manual intervent
 the next step: 'Seed the Gitian sources cache', which will fetch all necessary source files allowing
 for gitian to work offline.
 
-Building Ethf
+Building ETHF
 ----------------
 
-To build Ethf (for Linux, OSX and Windows) just follow the steps under 'perform
+To build ETHF (for Linux, OSX and Windows) just follow the steps under 'perform
 gitian builds' in [doc/release-process.md](release-process.md) in the ethf repository.
 
 This may take a long time as it also builds the dependencies needed for each descriptor.

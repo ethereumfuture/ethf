@@ -62,12 +62,12 @@
         <translation>Адреса отримання</translation>
     </message>
     <message>
-        <source>These are your Ethf addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Це ваша Ethf-адреса для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
+        <source>These are your ETHF addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Це ваша ETHF-адреса для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
     </message>
     <message>
-        <source>These are your Ethf addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Це ваші Ethf адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
+        <source>These are your ETHF addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Це ваші ETHF адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Підтвердження шифрування гаманця</translation>
     </message>
     <message>
-        <source>Ethf will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
-        <translation>Ethf зараз закриється, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші ETHF'и від крадіжки зловмисним програмним забезпеченням, що заражає ваш комп'ютер.</translation>
+        <source>ETHF will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
+        <translation>ETHF зараз закриється, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші ETHF'и від крадіжки зловмисним програмним забезпеченням, що заражає ваш комп'ютер.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -364,6 +364,6 @@
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     </context>
 </TS>

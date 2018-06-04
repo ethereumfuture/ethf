@@ -152,8 +152,8 @@
         <translation>Confirmer le cryptage du portefeuille</translation>
     </message>
     <message>
-        <source>Ethf will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
-        <translation>Ethf va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos ETHFs d'un vol par un malware ayant infecté votre ordinateur. </translation>
+        <source>ETHF will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
+        <translation>ETHF va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos ETHFs d'un vol par un malware ayant infecté votre ordinateur. </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -211,16 +211,16 @@
         <translation>BIP 38 crypter</translation>
     </message>
     <message>
-        <source>Enter a Pivx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Entrez une adresse Pivx que vous voulez crypter en utilisant BIP 38. Entrez une phrase secrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
+        <source>Enter a Ethf Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Entrez une adresse Ethf que vous voulez crypter en utilisant BIP 38. Entrez une phrase secrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresse :</translation>
     </message>
     <message>
-        <source>The Ethf address to sign the message with</source>
-        <translation>L'adresse Ethf avec laquelle signer le message</translation>
+        <source>The ETHF address to sign the message with</source>
+        <translation>L'adresse ETHF avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -251,8 +251,8 @@
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse Ethf</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse ETHF</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -271,12 +271,12 @@
         <translation>BIP 38 Décrypter</translation>
     </message>
     <message>
-        <source>The Ethf address the message was signed with</source>
-        <translation>L'adresse Ethf avec laquelle le message a été signé</translation>
+        <source>The ETHF address the message was signed with</source>
+        <translation>L'adresse ETHF avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse Ethf renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse ETHF renseignée</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -534,8 +534,8 @@
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <source>Send coins to a Ethf address</source>
-        <translation>Envoyer des pièces à une adresse Ethf</translation>
+        <source>Send coins to a ETHF address</source>
+        <translation>Envoyer des pièces à une adresse ETHF</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -546,16 +546,16 @@
         <translation>Afficher les masternodes</translation>
     </message>
     <message>
-        <source>Modify configuration options for Ethf</source>
-        <translation>Modifier les options de configuration pour Ethf</translation>
+        <source>Modify configuration options for ETHF</source>
+        <translation>Modifier les options de configuration pour ETHF</translation>
     </message>
     <message>
-        <source>Sign messages with your Ethf addresses to prove you own them</source>
-        <translation>Signer les messages avec votre adresse Ethf pour prouver qu'elles sont bien à vous.</translation>
+        <source>Sign messages with your ETHF addresses to prove you own them</source>
+        <translation>Signer les messages avec votre adresse ETHF pour prouver qu'elles sont bien à vous.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Ethf addresses</source>
-        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse Ethf spécifié</translation>
+        <source>Verify messages to ensure they were signed with specified ETHF addresses</source>
+        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse ETHF spécifié</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -653,8 +653,8 @@ Adresse : %4
         <translation>Chercher</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
-        <translation>Toutes les transaction ne seront pas affichés. Pour voir toutes les transactions, vous devez régler txindex=1 dans le fichier de configuration (pivx.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ethf.conf).</source>
+        <translation>Toutes les transaction ne seront pas affichés. Pour voir toutes les transactions, vous devez régler txindex=1 dans le fichier de configuration (ethf.conf).</translation>
     </message>
 </context>
 <context>
@@ -854,8 +854,8 @@ Adresse : %4
         <translation>Modifier l'adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Ethf address.</source>
-        <translation>L'adresse entrée "%1" n'est pas une adresse Ethf valide</translation>
+        <source>The entered address "%1" is not a valid ETHF address.</source>
+        <translation>L'adresse entrée "%1" n'est pas une adresse ETHF valide</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1038,32 +1038,32 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Veuillez sélectionner un niveau de confidentialité.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 ETHF</source>
-        <translation>Utiliser 2 masternodes différentes pour mélanger les fonds jusqu'a 1000 ETHF</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ETHF</source>
+        <translation>Utiliser 2 masternodes différentes pour mélanger les fonds jusqu'a 10000 ETHF</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 ETHF</source>
-        <translation>Utiliser 8 masternodes différentes pour mélanger les fonds jusqu'a 1000 ETHF</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 ETHF</source>
+        <translation>Utiliser 8 masternodes différentes pour mélanger les fonds jusqu'a 10000 ETHF</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Utiliser 16 masternodes différentes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 ETHF to anonymize 1000 ETHF</source>
-        <translation>Cette option est la plus rapide, et coutera ~0.025 ETHF pour anonymiser 1000 ETHF</translation>
+        <source>This option is the quickest and will cost about ~0.025 ETHF to anonymize 10000 ETHF</source>
+        <translation>Cette option est la plus rapide, et coutera ~0.025 ETHF pour anonymiser 10000 ETHF</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 ETHF to anonymize 1000 ETHF</source>
-        <translation>Cette option est moyennement rapide, et coutera 0.05 ETHF pour anonymiser 1000 ETHF</translation>
+        <source>This option is moderately fast and will cost about 0.05 ETHF to anonymize 10000 ETHF</source>
+        <translation>Cette option est moyennement rapide, et coutera 0.05 ETHF pour anonymiser 10000 ETHF</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Il s'agit de l'option la plus lente est la plus sécurisé. Utiliser l'anonymat maximum coutera</translation>
     </message>
     <message>
-        <source>0.1 ETHF per 1000 ETHF you anonymize.</source>
-        <translation>0.1 ETHF par 1000 ETHF vous anonymisez.</translation>
+        <source>0.1 ETHF per 10000 ETHF you anonymize.</source>
+        <translation>0.1 ETHF par 10000 ETHF vous anonymisez.</translation>
     </message>
     </context>
 <context>
@@ -1461,8 +1461,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Payer à :</translation>
     </message>
     <message>
-        <source>The Ethf address to send the payment to</source>
-        <translation>L'adresse Ethf à laquelle envoyer le paiement</translation>
+        <source>The ETHF address to send the payment to</source>
+        <translation>L'adresse ETHF à laquelle envoyer le paiement</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1507,8 +1507,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Signer le message</translation>
     </message>
     <message>
-        <source>The Ethf address to sign the message with</source>
-        <translation>L'adresse Ethf avec laquelle signer le message</translation>
+        <source>The ETHF address to sign the message with</source>
+        <translation>L'adresse ETHF avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1535,16 +1535,16 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse Ethf</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse ETHF</translation>
     </message>
     <message>
-        <source>The Ethf address the message was signed with</source>
-        <translation>L'adresse Ethf avec laquelle le message a été signé</translation>
+        <source>The ETHF address the message was signed with</source>
+        <translation>L'adresse ETHF avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse Ethf renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse ETHF renseignée</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1738,7 +1738,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     <message>
         <source>Error</source>
         <translation>Erreur</translation>

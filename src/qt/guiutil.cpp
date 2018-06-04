@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Ethf developers
+// Copyright (c) 2017-2018 The ETHF developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -111,7 +111,7 @@ void setupAddressWidget(QValidatedLineEdit* widget, QWidget* parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Ethf address (e.g. %1)").arg("AWSbBnzmNkjDVaYHX7vkL1MqD96pRYWtZo"));
+    widget->setPlaceholderText(QObject::tr("Enter a ETHF address (e.g. %1)").arg("D7VFR83SQbiezrW72hjcWJtcfip5krte2Z"));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -128,7 +128,7 @@ void setupAmountWidget(QLineEdit* widget, QWidget* parent)
 
 bool parseBitcoinURI(const QUrl& uri, SendCoinsRecipient* out)
 {
-    // return if URI is not valid or is no Ethf: URI
+    // return if URI is not valid or is no ETHF: URI
     if (!uri.isValid() || uri.scheme() != QString(URI_SCHEME))
         return false;
 
@@ -582,12 +582,12 @@ bool DHMSTableWidgetItem::operator<(QTableWidgetItem const& item) const
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Ethf.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "ETHF.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Ethf.lnk
+    // check for ETHF.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -700,7 +700,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         // Write a ethf.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Ethf\n";
+        optionFile << "Name=ETHF\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -893,12 +893,12 @@ QString formatServicesStr(quint64 mask)
         uint64_t check = 1 << i;
         if (mask & check) {
             switch (check) {
-	    case NODE_BLOOM:
-	    case NODE_BLOOM_WITHOUT_MN:
-		    strList.append(QObject::tr("BLOOM"));
-		    break;
             case NODE_NETWORK:
                 strList.append(QObject::tr("NETWORK"));
+                break;
+            case NODE_BLOOM:
+            case NODE_BLOOM_WITHOUT_MN:
+                strList.append(QObject::tr("BLOOM"));
                 break;
             default:
                 strList.append(QString("%1[%2]").arg(QObject::tr("UNKNOWN")).arg(check));

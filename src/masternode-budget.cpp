@@ -1,6 +1,6 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Ethf developers
+// Copyright (c) 2017-2018 The ETHF developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -29,9 +29,8 @@ int nSubmittedFinalBudget;
 int GetBudgetPaymentCycleBlocks()
 {
     // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
-    if (Params().NetworkID() == CBaseChainParams::MAIN) return 28800;
-
-	//for testing purposes
+    if (Params().NetworkID() == CBaseChainParams::MAIN) return 43200;
+    //for testing purposes
 
     return 144; //ten times per day
 }
@@ -413,6 +412,7 @@ bool CBudgetManager::AddProposal(CBudgetProposal& budgetProposal)
     }
 
     mapProposals.insert(make_pair(budgetProposal.GetHash(), budgetProposal));
+    LogPrintf("CBudgetManager::AddProposal - proposal %s added\n", budgetProposal.GetName ().c_str ());
     return true;
 }
 
@@ -442,7 +442,7 @@ void CBudgetManager::CheckAndRemove()
         CBudgetProposal* pbudgetProposal = &((*it2).second);
         pbudgetProposal->fValid = pbudgetProposal->IsValid(strError);
         if (!strError.empty ()) {
-            LogPrintf("CBudgetManager::CheckAndRemove - invalid budget proposal - %s\n", strError);
+            LogPrintf("CBudgetManager::CheckAndRemove - invalid budget proposal %s - %s\n", pbudgetProposal->GetName().c_str (), strError);
             strError = "";
         }
         ++it2;
@@ -797,52 +797,38 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
 
     //get block value and calculate from that
     CAmount nSubsidy = 0;
-
-    if (nHeight <= 432000 && nHeight > Params().LAST_POW_BLOCK()) {
+    if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
+        nSubsidy = 50 * COIN;
+    } else if (nHeight <= 302399 && nHeight > Params().LAST_POW_BLOCK()) {
+        nSubsidy = 50 * COIN;
+    } else if (nHeight <= 345599 && nHeight >= 302400) {
+        nSubsidy = 45 * COIN;
+    } else if (nHeight <= 388799 && nHeight >= 345600) {
+        nSubsidy = 40 * COIN;
+    } else if (nHeight <= 431999 && nHeight >= 388800) {
+        nSubsidy = 35 * COIN;
+    } else if (nHeight <= 475199 && nHeight >= 432000) {
+        nSubsidy = 30 * COIN;
+    } else if (nHeight <= 518399 && nHeight >= 475200) {
         nSubsidy = 25 * COIN;
-    } else if (nHeight <= 518400 && nHeight > 432000) {
-        nSubsidy = 21.875 * COIN;
-    } else if (nHeight <= 604800 && nHeight > 518400) {
-        nSubsidy = 18.750 * COIN;
-    } else if (nHeight <= 691200 && nHeight > 604800) {
-        nSubsidy = 15.625 * COIN;
-
-    // POS Year 2
-    } else if (nHeight <= 777600 && nHeight > 691200) {
-        nSubsidy = 12.50 * COIN;
-    } else if (nHeight <= 864000 && nHeight > 777600) {
-        nSubsidy = 10.938 * COIN;
-    } else if (nHeight <= 950400 && nHeight > 864000) {
-        nSubsidy = 9.375 * COIN;
-    } else if (nHeight <= 1036800 && nHeight > 950400) {
-        nSubsidy = 7.812 * COIN;
-
-    // POS Year 3
-    } else if (nHeight <= 1123200 && nHeight > 1036800) {
-        nSubsidy = 6.250 * COIN;
-    } else if (nHeight <= 1209600 && nHeight > 1123200) {
-        nSubsidy = 5.469 * COIN;
-    } else if (nHeight <= 1296000 && nHeight > 1209600) {
-        nSubsidy = 4.688 * COIN;
-    } else if (nHeight <= 1382400 && nHeight > 1296000) {
-        nSubsidy = 3.906 * COIN;
-    // POS Year 4
-    } else if (nHeight <= 1468800 && nHeight > 1382400) {
-        nSubsidy = 3.125 * COIN;
-    } else if (nHeight <= 1555200 && nHeight > 1468800) {
-        nSubsidy = 2.734 * COIN;
-    } else if (nHeight <= 1641600 && nHeight > 1555200) {
-        nSubsidy = 2.344 * COIN;
-    } else if (nHeight <= 1728000 && nHeight > 1641600) {
-        nSubsidy = 1.953 * COIN;
-    } else if (nHeight > 1728000) {
-        nSubsidy = 1.625 * COIN;
+    } else if (nHeight <= 561599 && nHeight >= 518400) {
+        nSubsidy = 20 * COIN;
+    } else if (nHeight <= 604799 && nHeight >= 561600) {
+        nSubsidy = 15 * COIN;
+    } else if (nHeight <= 647999 && nHeight >= 604800) {
+        nSubsidy = 10 * COIN;
+    } else if (nHeight >= 648000) {
+        nSubsidy = 5 * COIN;
     } else {
         nSubsidy = 0 * COIN;
     }
 
-    // Amount of blocks in a months period of time (using 1.5 minutes per)
-    return ((nSubsidy / 100) * 10) * 960 * 30;
+    // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
+    if (nHeight <= 172800) {
+        return 648000 * COIN;
+    } else {
+        return ((nSubsidy / 100) * 10) * 1440 * 30;
+    }
 }
 
 void CBudgetManager::NewBlock()
@@ -858,10 +844,11 @@ void CBudgetManager::NewBlock()
 
     //this function should be called 1/14 blocks, allowing up to 100 votes per day on all proposals
     if (chainActive.Height() % 14 != 0) return;
+
     // incremental sync with our peers
     if (masternodeSync.IsSynced()) {
         LogPrintf("CBudgetManager::NewBlock - incremental sync started\n");
-        if (chainActive.Height() % 960 == rand() % 960) {
+        if (chainActive.Height() % 1440 == rand() % 1440) {
             ClearSeen();
             ResetSync();
         }
@@ -980,7 +967,7 @@ void CBudgetManager::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
         }
 
         Sync(pfrom, nProp);
-	LogPrint("mnbudget", "mnvs - Sent Masternode votes to peer %i\n", pfrom->GetId());
+        LogPrint("mnbudget", "mnvs - Sent Masternode votes to peer %i\n", pfrom->GetId());
     }
 
     if (strCommand == "mprop") { //Masternode Proposal
@@ -1031,7 +1018,7 @@ void CBudgetManager::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
 
         CMasternode* pmn = mnodeman.Find(vote.vin);
         if (pmn == NULL) {
-	    LogPrintf("mvote - unknown masternode - vin: %s\n", vote.vin.prevout.hash.ToString());
+            LogPrintf("mvote - unknown masternode - vin: %s\n", vote.vin.prevout.hash.ToString());
             mnodeman.AskForMN(pfrom, vote.vin);
             return;
         }
@@ -1051,7 +1038,8 @@ void CBudgetManager::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
             vote.Relay();
             masternodeSync.AddedBudgetItem(vote.GetHash());
         }
-	LogPrint("mnbudget", "mvote - new budget vote - %s\n", vote.GetHash().ToString());
+
+        LogPrint("mnbudget", "mvote - new budget vote - %s\n", vote.GetHash().ToString());
     }
 
     if (strCommand == "fbs") { //Finalized Budget Suggestion
@@ -1103,7 +1091,7 @@ void CBudgetManager::ProcessMessage(CNode* pfrom, std::string& strCommand, CData
 
         CMasternode* pmn = mnodeman.Find(vote.vin);
         if (pmn == NULL) {
-	    LogPrint("mnbudget", "fbvote - unknown masternode - vin: %s\n", vote.vin.prevout.hash.ToString());
+            LogPrint("mnbudget", "fbvote - unknown masternode - vin: %s\n", vote.vin.prevout.hash.ToString());
             mnodeman.AskForMN(pfrom, vote.vin);
             return;
         }
@@ -1655,10 +1643,9 @@ bool CBudgetVote::SignatureValid(bool fSignatureCheck)
     CMasternode* pmn = mnodeman.Find(vin);
 
     if (pmn == NULL) {
-	    if (fDebug) {
-		    LogPrintf("CBudgetVote::SignatureValid() - Unknown Masternode - %s\n", vin.prevout.hash.ToString());
-	    }
-
+        if (fDebug){
+            LogPrintf("CBudgetVote::SignatureValid() - Unknown Masternode - %s\n", vin.prevout.hash.ToString());
+        }
         return false;
     }
 

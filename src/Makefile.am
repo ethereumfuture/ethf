@@ -72,7 +72,7 @@ if BUILD_BITCOIN_UTILS
 endif
 
 .PHONY: FORCE
-# ethereumf core #
+# ethf core #
 BITCOIN_CORE_H = \
   activemasternode.h \
   addrman.h \
@@ -181,7 +181,7 @@ obj/build.h: FORCE
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between ethfd and ethf-qt
-libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libbitcoin_server_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS)
 libbitcoin_server_a_SOURCES = \
   addrman.cpp \
   alert.cpp \
@@ -265,6 +265,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/ripemd160.cpp \
   crypto/aes_helper.c \
   crypto/blake.c \
+  crypto/bmw.c \
   crypto/groestl.c \
   crypto/jh.c \
   crypto/keccak.c \
@@ -279,6 +280,7 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sha1.h \
   crypto/ripemd160.h \
   crypto/sph_blake.h \
+  crypto/sph_bmw.h \
   crypto/sph_groestl.h \
   crypto/sph_jh.h \
   crypto/sph_keccak.h \
@@ -383,7 +385,7 @@ if TARGET_WINDOWS
 ethfd_SOURCES += ethfd-res.rc
 endif
 
-ethfd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+ethfd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
 ethfd_CPPFLAGS = $(BITCOIN_INCLUDES)
 ethfd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
@@ -394,8 +396,7 @@ ethf_cli_LDADD = \
   $(LIBBITCOIN_UTIL) \
   $(BOOST_LIBS) \
   $(SSL_LIBS) \
-  $(CRYPTO_LIBS) \
-  $(EVENT_LIBS)
+  $(CRYPTO_LIBS)
 
 ethf_cli_SOURCES = \
   ethf-cli.cpp

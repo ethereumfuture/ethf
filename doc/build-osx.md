@@ -44,8 +44,8 @@ Instructions: Homebrew
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://FIXME_EATBATTERYS
-        cd Ethf
+        git clone https://github.com/ETHF-Project/ETHF.git
+        cd ETHF
 
 2.  Build ethfd:
 
@@ -92,7 +92,7 @@ All dependencies should be compiled with these flags:
  -arch x86_64
  -isysroot $(xcode-select --print-path)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
 
-Once dependencies are compiled, see release-process.md for how the Ethf-Qt.app
+Once dependencies are compiled, see release-process.md for how the ETHF-Qt.app
 bundle is packaged and signed to create the .dmg disk image that is distributed.
 
 Running
@@ -104,14 +104,14 @@ directory. We have to first create the RPC configuration file, though.
 Run `./ethfd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=ethfrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Ethf/ethf.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Ethf/ethf.conf"
+    echo -e "rpcuser=ethfrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/ETHF/ethf.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/ETHF/ethf.conf"
 
 The next time you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours;
 you can monitor its process by looking at the debug.log file, like this:
 
-    tail -f $HOME/Library/Application\ Support/Ethf/debug.log
+    tail -f $HOME/Library/Application\ Support/ETHF/debug.log
 
 Other commands:
 -------

@@ -35,9 +35,9 @@ def check_json_precision():
 def determine_db_dir():
     """Return the default location of the ethf data directory"""
     if platform.system() == "Darwin":
-        return os.path.expanduser("~/Library/Application Support/Ethf/")
+        return os.path.expanduser("~/Library/Application Support/ETHF/")
     elif platform.system() == "Windows":
-        return os.path.join(os.environ['APPDATA'], "Ethf")
+        return os.path.join(os.environ['APPDATA'], "ETHF")
     return os.path.expanduser("~/.ethf")
 
 def read_bitcoin_config(dbdir):

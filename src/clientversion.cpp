@@ -13,7 +13,7 @@
  * for both ethfd and ethf-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Ethereum Future Core");
+const std::string CLIENT_NAME("ETHF Core");
 
 /**
  * Client version number

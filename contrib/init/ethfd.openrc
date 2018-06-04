@@ -16,8 +16,8 @@ BITCOIND_USER=${BITCOIND_USER:-ethf}
 BITCOIND_GROUP=${BITCOIND_GROUP:-ethf}
 BITCOIND_BIN=${BITCOIND_BIN:-/usr/bin/ethfd}
 
-name="Ethereum Future Core Daemon"
-description="Ethf crypto-currency p2p network daemon"
+name="ETHF Core Daemon"
+description="ETHF crypto-currency p2p network daemon"
 
 command="/usr/bin/ethfd"
 command_args="-pid=\"${BITCOIND_PIDFILE}\" \

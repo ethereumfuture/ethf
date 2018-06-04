@@ -286,8 +286,8 @@ std::string BlockToString(CBlockIndex* pBlock)
 
 std::string TxToString(uint256 BlockHash, const CTransaction& tx)
 {
-    int64_t Input = 0;
-    int64_t Output = tx.GetValueOut();
+    CAmount Input = 0;
+    CAmount Output = tx.GetValueOut();
 
     std::string InputsContentCells[] = {_("#"), _("Taken from"), _("Address"), _("Amount")};
     std::string InputsContent = makeHTMLTableRow(InputsContentCells, sizeof(InputsContentCells) / sizeof(std::string));
@@ -391,7 +391,7 @@ std::string AddressToString(const CBitcoinAddress& Address)
     CScript AddressScript;
     AddressScript.SetDestination(Address.Get());
 
-    int64_t Sum = 0;
+    CAmount Sum = 0;
     bool fAddrIndex = false;
 
     if (!fAddrIndex)
@@ -471,7 +471,7 @@ void BlockExplorer::showEvent(QShowEvent*)
 
         if (!GetBoolArg("-txindex", false)) {
             QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ethf.conf).");
-            QMessageBox::warning(this, "Ethereum Future Core Blockchain Explorer", Warning, QMessageBox::Ok);
+            QMessageBox::warning(this, "ETHF Core Blockchain Explorer", Warning, QMessageBox::Ok);
         }
     }
 }

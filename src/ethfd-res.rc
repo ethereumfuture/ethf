@@ -16,7 +16,7 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Ethf"
+            VALUE "CompanyName",        "ETHF"
             VALUE "FileDescription",    "ethfd (OSS daemon/client for Ethf)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ethfd"

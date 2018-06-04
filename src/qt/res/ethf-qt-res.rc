@@ -19,14 +19,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Ethf"
-            VALUE "FileDescription",    "Ethereum Future Core (OSS GUI client for Ethf)"
+            VALUE "CompanyName",        "ETHF"
+            VALUE "FileDescription",    "ETHF Core (OSS GUI client for ETHF)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ethf-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
             VALUE "OriginalFilename",   "ethf-qt.exe"
-            VALUE "ProductName",        "Ethereum Future Core"
+            VALUE "ProductName",        "ETHF Core"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

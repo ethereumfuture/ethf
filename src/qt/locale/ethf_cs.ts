@@ -62,12 +62,12 @@
         <translation>Adresy pro přijetí peněz</translation>
     </message>
     <message>
-        <source>These are your Ethf addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto jsou Vaše Ethf adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
+        <source>These are your ETHF addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto jsou Vaše ETHF adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
     </message>
     <message>
-        <source>These are your Ethf addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto jsou Vaše Ethf adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
+        <source>These are your ETHF addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto jsou Vaše ETHF adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Potvrdit zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Ethf will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
-        <translation>Ethf se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše ETHFy před krádží, pokud je Váš počítač infikován malwarem.</translation>
+        <source>ETHF will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
+        <translation>ETHF se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše ETHFy před krádží, pokud je Váš počítač infikován malwarem.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Šifrovat</translation>
     </message>
     <message>
-        <source>Enter a Pivx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadejte Ethf adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
+        <source>Enter a Ethf Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadejte ETHF adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresa:</translation>
     </message>
     <message>
-        <source>The Ethf address to sign the message with</source>
-        <translation>Ethf adresa pro podepsání zprávy</translation>
+        <source>The ETHF address to sign the message with</source>
+        <translation>ETHF adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Ethf adresu</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto ETHF adresu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Vložte BIP 38 šifrovaný privítní klíc. Frázové heslo vložte do prostředního boxu. Kliknětě na Dešifrovat Klíč pro výpočet privátního klíče. Poté co bude klíč dešifrován, kliknutím na 'Importovat Adresu' přidáte privátní klíč do Vaší peněženky.</translation>
     </message>
     <message>
-        <source>The Ethf address the message was signed with</source>
-        <translation>Ethf adresa zprávy byla podpsána</translation>
+        <source>The ETHF address the message was signed with</source>
+        <translation>ETHF adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Ethf adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou ETHF adresou</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,16 +598,16 @@
         <translation>Nástrojová lišta záložek</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
-        <source>Send coins to a Ethf address</source>
-        <translation>Odeslat platbuna Ethf adresu</translation>
+        <source>Send coins to a ETHF address</source>
+        <translation>Odeslat platbuna ETHF adresu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Vyžádat platbu (generování QK kódu a pivx: URIs)</translation>
+        <source>Request payments (generates QR codes and ethf: URIs)</source>
+        <translation>Vyžádat platbu (generování QK kódu a ethf: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -618,24 +618,24 @@
         <translation>Procházet masternody</translation>
     </message>
     <message>
-        <source>&amp;About Ethereum Future Core</source>
-        <translation>&amp;O Ethereum Future Core</translation>
+        <source>&amp;About ETHF Core</source>
+        <translation>&amp;O ETHF Core</translation>
     </message>
     <message>
-        <source>Show information about Ethereum Future Core</source>
-        <translation>Zobraz informace o Ethereum Future Core</translation>
+        <source>Show information about ETHF Core</source>
+        <translation>Zobraz informace o ETHF Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Ethf</source>
-        <translation>Upravit možnosti konfigurace pro Ethf</translation>
+        <source>Modify configuration options for ETHF</source>
+        <translation>Upravit možnosti konfigurace pro ETHF</translation>
     </message>
     <message>
-        <source>Sign messages with your Ethf addresses to prove you own them</source>
-        <translation>Podepsat zprávy Vaší Ethf adresou pro prokázaní, že jste jejich vlastníkem</translation>
+        <source>Sign messages with your ETHF addresses to prove you own them</source>
+        <translation>Podepsat zprávy Vaší ETHF adresou pro prokázaní, že jste jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Ethf addresses</source>
-        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými Ethf adresami</translation>
+        <source>Verify messages to ensure they were signed with specified ETHF addresses</source>
+        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými ETHF adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Otevřít Masternodový konfigurační soubor</translation>
     </message>
     <message>
-        <source>Open a Ethf: URI or payment request</source>
-        <translation>Otevřít Ethf: URI nebo platební žádost</translation>
+        <source>Open a ETHF: URI or payment request</source>
+        <translation>Otevřít ETHF: URI nebo platební žádost</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Okno blokového průzkumníka</translation>
     </message>
     <message>
-        <source>Show the Ethereum Future Core help message to get a list with possible Ethf command-line options</source>
-        <translation>Zobrazit Ethereum Future Core pomocnou zpráv pro získání seznamu možných parametrů Ethf pro příkazy do příkazové řádky</translation>
+        <source>Show the ETHF Core help message to get a list with possible ETHF command-line options</source>
+        <translation>Zobrazit ETHF Core pomocnou zpráv pro získání seznamu možných parametrů ETHF pro příkazy do příkazové řádky</translation>
     </message>
     <message>
-        <source>Ethereum Future Core client</source>
-        <translation>Ethereum Future Core klient</translation>
+        <source>ETHF Core client</source>
+        <translation>ETHF Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -809,8 +809,8 @@ MultiSend: %1</translation>
         <translation>TextPopisku</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
-        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (pivx.conf) txindex=1.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ethf.conf).</source>
+        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (ethf.conf) txindex=1.</translation>
     </message>
 </context>
 <context>
@@ -1070,8 +1070,8 @@ MultiSend: %1</translation>
         <translation>Upravit adresu k odeslání platby</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Ethf address.</source>
-        <translation>Zadaná adresa "%1" není validní Ethf adresa.</translation>
+        <source>The entered address "%1" is not a valid ETHF address.</source>
+        <translation>Zadaná adresa "%1" není validní ETHF adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1116,12 +1116,12 @@ MultiSend: %1</translation>
         <translation>verze</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
-        <source>About Ethereum Future Core</source>
-        <translation>O Ethereum Future Core</translation>
+        <source>About ETHF Core</source>
+        <translation>O ETHF Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1155,16 +1155,16 @@ MultiSend: %1</translation>
         <translation>Vítejte</translation>
     </message>
     <message>
-        <source>Welcome to Ethereum Future Core.</source>
-        <translation>Vítejte v Ethereum Future Core.</translation>
+        <source>Welcome to ETHF Core.</source>
+        <translation>Vítejte v ETHF Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Ethereum Future Core will store its data.</source>
-        <translation>Při prvním spuštění programu si můžete vybrat, kam bude Ethereum Future Core ukládat svá data.</translation>
+        <source>As this is the first time the program is launched, you can choose where ETHF Core will store its data.</source>
+        <translation>Při prvním spuštění programu si můžete vybrat, kam bude ETHF Core ukládat svá data.</translation>
     </message>
     <message>
-        <source>Ethereum Future Core will download and store a copy of the Ethf block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Ethereum Future Core stáhne a uloží kopii Ethf blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
+        <source>ETHF Core will download and store a copy of the ETHF block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>ETHF Core stáhne a uloží kopii ETHF blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1175,8 +1175,8 @@ MultiSend: %1</translation>
         <translation>Použít vlastní složku pro data</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1442,24 +1442,24 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Vyberte úrpvěň ochrany soukromí</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 ETHF</source>
-        <translation>Použí 2 oddělené masternody k promíchání prostředků až do 1000 ETHF</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ETHF</source>
+        <translation>Použí 2 oddělené masternody k promíchání prostředků až do 10000 ETHF</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Použít 16 oddělených masternodů</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 ETHF to anonymize 1000 ETHF</source>
-        <translation>Tato možnost je nejrychleší a bude stát zhruba ~0.025 ETHF pro anonymizaci 1000 ETHF</translation>
+        <source>This option is the quickest and will cost about ~0.025 ETHF to anonymize 10000 ETHF</source>
+        <translation>Tato možnost je nejrychleší a bude stát zhruba ~0.025 ETHF pro anonymizaci 10000 ETHF</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Toto je nejpomalejší a nejvíce bezpečná volba. Použití maximalní anonymity bude stát</translation>
     </message>
     <message>
-        <source>0.1 ETHF per 1000 ETHF you anonymize.</source>
-        <translation>0.1 ETHF za 1000 ETHF anonymizujete.</translation>
+        <source>0.1 ETHF per 10000 ETHF you anonymize.</source>
+        <translation>0.1 ETHF za 10000 ETHF anonymizujete.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1524,16 +1524,16 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start Ethf after logging in to the system.</source>
-        <translation>Automaticky spustit Ethf po přihlášení do systému</translation>
+        <source>Automatically start ETHF after logging in to the system.</source>
+        <translation>Automaticky spustit ETHF po přihlášení do systému</translation>
     </message>
     <message>
-        <source>&amp;Start Ethf on system login</source>
-        <translation>&amp;Spusti Ethf při přihlášení do systému</translation>
+        <source>&amp;Start ETHF on system login</source>
+        <translation>&amp;Spusti ETHF při přihlášení do systému</translation>
     </message>
     <message>
-        <source>Amount of Ethf to keep anonymized</source>
-        <translation>Počet Ethf pro anonymní držení</translation>
+        <source>Amount of ETHF to keep anonymized</source>
+        <translation>Počet ETHF pro anonymní držení</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
@@ -2199,8 +2199,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The Ethf address to sign the message with</source>
-        <translation>Ethf adresa pro podepsání zprávy</translation>
+        <source>The ETHF address to sign the message with</source>
+        <translation>ETHF adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2227,16 +2227,16 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto Ethf adresu</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto ETHF adresu</translation>
     </message>
     <message>
-        <source>The Ethf address the message was signed with</source>
-        <translation>Ethf adresa zprávy byla podpsána</translation>
+        <source>The ETHF address the message was signed with</source>
+        <translation>ETHF adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou Ethf adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou ETHF adresou</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2278,8 +2278,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     </context>
 <context>
@@ -2382,7 +2382,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>

@@ -164,6 +164,6 @@
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     </context>
 </TS>

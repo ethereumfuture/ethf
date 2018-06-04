@@ -465,21 +465,20 @@ string DecodeBase32(const string& str)
 
 static bool ParsePrechecks(const std::string& str)
 {
-	if (str.empty()) // No empty string allowed
-		return false;
-	if (str.size() >= 1 && (isspace(str[0]) || isspace(str[str.size()-1]))) // No padding allowed
-		return false;
-	if (str.size() != strlen(str.c_str())) // No embedded NUL characters allowed
-		return false;
-	return true;
+    if (str.empty()) // No empty string allowed
+        return false;
+    if (str.size() >= 1 && (isspace(str[0]) || isspace(str[str.size()-1]))) // No padding allowed
+        return false;
+    if (str.size() != strlen(str.c_str())) // No embedded NUL characters allowed
+        return false;
+    return true;
 }
 
 bool ParseInt32(const std::string& str, int32_t *out)
 {
-	if (!ParsePrechecks(str))
-		return false;
-	char *endp = NULL;
-
+    if (!ParsePrechecks(str))
+        return false;
+    char *endp = NULL;
     errno = 0; // strtol will not set errno if valid
     long int n = strtol(str.c_str(), &endp, 10);
     if(out) *out = (int32_t)n;
@@ -501,7 +500,7 @@ bool ParseInt64(const std::string& str, int64_t *out)
     if(out) *out = (int64_t)n;
     // Note that strtoll returns a *long long int*, so even if strtol doesn't report a over/underflow
     // we still have to check that the returned value is within the range of an *int64_t*.
-   return endp && *endp == 0 && !errno &&
+    return endp && *endp == 0 && !errno &&
         n >= std::numeric_limits<int64_t>::min() &&
         n <= std::numeric_limits<int64_t>::max();
 }
@@ -509,11 +508,11 @@ bool ParseInt64(const std::string& str, int64_t *out)
 bool ParseDouble(const std::string& str, double *out)
 {
     if (!ParsePrechecks(str))
-       return false;
+        return false;
     if (str.size() >= 2 && str[0] == '0' && str[1] == 'x') // No hexadecimal floats allowed
         return false;
     std::istringstream text(str);
-   text.imbue(std::locale::classic());
+    text.imbue(std::locale::classic());
     double result;
     text >> result;
     if(out) *out = result;

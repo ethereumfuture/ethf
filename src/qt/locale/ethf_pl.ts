@@ -227,8 +227,8 @@
         <translation>Zakodowany klucz:</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres Ethf jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres ETHF jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -518,16 +518,16 @@
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
+        <source>ETHF Core</source>
         <translation>&amp;Rdzeń bitcoin</translation>
     </message>
     <message>
-        <source>Send coins to a Ethf address</source>
-        <translation>Wyślij monety do adresu Ethf</translation>
+        <source>Send coins to a ETHF address</source>
+        <translation>Wyślij monety do adresu ETHF</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Zarządaj płatności (generuje kod QR i pivx:URI)</translation>
+        <source>Request payments (generates QR codes and ethf: URIs)</source>
+        <translation>Zarządaj płatności (generuje kod QR i ethf:URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -538,24 +538,24 @@
         <translation>Przeglądaj masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Ethereum Future Core</source>
+        <source>&amp;About ETHF Core</source>
         <translation>&amp;O rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Show information about Ethereum Future Core</source>
+        <source>Show information about ETHF Core</source>
         <translation>Pokaż informacje o rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Modify configuration options for Ethf</source>
-        <translation>Modyfikuj opcje konfiguracji Ethf</translation>
+        <source>Modify configuration options for ETHF</source>
+        <translation>Modyfikuj opcje konfiguracji ETHF</translation>
     </message>
     <message>
-        <source>Sign messages with your Ethf addresses to prove you own them</source>
-        <translation>Zatwierdź wiadomość z twoimi adresami Ethf, by udowodnić, że jesteś w ich posiadaniu</translation>
+        <source>Sign messages with your ETHF addresses to prove you own them</source>
+        <translation>Zatwierdź wiadomość z twoimi adresami ETHF, by udowodnić, że jesteś w ich posiadaniu</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Ethf addresses</source>
-        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu Ethf</translation>
+        <source>Verify messages to ensure they were signed with specified ETHF addresses</source>
+        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu ETHF</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -582,8 +582,8 @@
         <translation>Otwórz &amp;Plik konfiguracji Masternode</translation>
     </message>
     <message>
-        <source>Open a Ethf: URI or payment request</source>
-        <translation>Otwórz Ethf: URI i żądanie zapłaty</translation>
+        <source>Open a ETHF: URI or payment request</source>
+        <translation>Otwórz ETHF: URI i żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -594,12 +594,12 @@
         <translation>Okno eksplorera bloków</translation>
     </message>
     <message>
-        <source>Show the Ethereum Future Core help message to get a list with possible Ethf command-line options</source>
-        <translation>Pokaż wiadomość pomocy rdzenia Ethf, aby dostać listę możliwych opcji Ethf command-line</translation>
+        <source>Show the ETHF Core help message to get a list with possible ETHF command-line options</source>
+        <translation>Pokaż wiadomość pomocy rdzenia ETHF, aby dostać listę możliwych opcji ETHF command-line</translation>
     </message>
     <message>
-        <source>Ethereum Future Core client</source>
-        <translation>Rdzeń Ethf klient</translation>
+        <source>ETHF Core client</source>
+        <translation>Rdzeń ETHF klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -916,7 +916,7 @@ MultiWysyłlka: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Ethereum Future Core</source>
+        <source>ETHF Core</source>
         <translation>&amp;Rdzeń bitcoin</translation>
     </message>
     </context>
@@ -931,7 +931,7 @@ MultiWysyłlka: %1</translation>
         <translation>Użyj niestandardowej ścieżki danych</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
+        <source>ETHF Core</source>
         <translation>&amp;Rdzeń bitcoin</translation>
     </message>
     <message>
@@ -1192,16 +1192,16 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Zezwól na przychodzące połączenia</translation>
     </message>
     <message>
-        <source>Automatically start Ethf after logging in to the system.</source>
-        <translation>Automatycznie uruchom Ethf po zalogowaniu do systemu</translation>
+        <source>Automatically start ETHF after logging in to the system.</source>
+        <translation>Automatycznie uruchom ETHF po zalogowaniu do systemu</translation>
     </message>
     <message>
-        <source>&amp;Start Ethf on system login</source>
-        <translation>&amp;Uruchom Ethf podczas logowania do systemu</translation>
+        <source>&amp;Start ETHF on system login</source>
+        <translation>&amp;Uruchom ETHF podczas logowania do systemu</translation>
     </message>
     <message>
-        <source>Amount of Ethf to keep anonymized</source>
-        <translation>Liczba Ethf do anonimizacji</translation>
+        <source>Amount of ETHF to keep anonymized</source>
+        <translation>Liczba ETHF do anonimizacji</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1220,18 +1220,18 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>&amp;Sieć</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Ethf.</source>
-        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie Ethf</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting ETHF.</source>
+        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie ETHF</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/ethf-project/ethf-project-translations</source>
         <translation>Brakuje języka bądź nieukończona pełnego tłumaczenia? Pomóż w tłumaczeniu tutaj:
-https://www.transifex.com/pivx-project/pivx-project-translations </translation>
+https://www.transifex.com/ethf-project/ethf-project-translations </translation>
     </message>
     <message>
-        <source>Connect to the Ethf network through a SOCKS5 proxy.</source>
-        <translation>Połącz z siecią Ethf poprzez SOCKS5 proxy.</translation>
+        <source>Connect to the ETHF network through a SOCKS5 proxy.</source>
+        <translation>Połącz z siecią ETHF poprzez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1458,8 +1458,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations </translation>
         <translation>Liczba</translation>
     </message>
     <message>
-        <source>Enter a Ethf address (e.g. %1)</source>
-        <translation>Wprowadź adres Ethf (np. %1)</translation>
+        <source>Enter a ETHF address (e.g. %1)</source>
+        <translation>Wprowadź adres ETHF (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1897,8 +1897,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations </translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres Ethf jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres ETHF jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>
@@ -1932,7 +1932,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations </translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Ethereum Future Core</source>
+        <source>ETHF Core</source>
         <translation>&amp;Rdzeń bitcoin</translation>
     </message>
     </context>
@@ -2024,7 +2024,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations </translation>
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     <message>
         <source>Error</source>
         <translation>Błąd</translation>

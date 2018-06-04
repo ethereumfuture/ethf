@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Wählen Sie die Adresse aus, an die Sie Ethf überweisen möchten</translation>
+        <translation>Wählen Sie die Adresse aus, an die Sie ETHF überweisen möchten</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Wählen Sie die Adresse aus, über die Sie Ethf empfangen wollen</translation>
+        <translation>Wählen Sie die Adresse aus, über die Sie ETHF empfangen wollen</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +62,12 @@
         <translation>Empfangsadressen</translation>
     </message>
     <message>
-        <source>These are your Ethf addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dies sind ihre Ethf-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie Ethf überweisen.</translation>
+        <source>These are your ETHF addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dies sind ihre ETHF-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie ETHF überweisen.</translation>
     </message>
     <message>
-        <source>These are your Ethf addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dies sind ihre Ethf-Adressen zum Empfangen von Zahlungen. Es wird empfohlen für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
+        <source>These are your ETHF addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dies sind ihre ETHF-Adressen zum Empfangen von Zahlungen. Es wird empfohlen für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,7 +176,7 @@
         <translation>Wallet-Verschlüsselung bestätigen</translation>
     </message>
     <message>
-        <source>Ethf will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
+        <source>ETHF will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
         <translation>Die Anwendungs wird nun geschlossen um die Verschlüsselung abzuschließen. Bitte beachten Sie, dass auch Verschlüsselung nicht nicht vollständig vor Diebstahl ihrer ETHFs durch Schadsoftware schützt, die ihren Computer befällt.</translation>
     </message>
     <message>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Verschlüsselung</translation>
     </message>
     <message>
-        <source>Enter a Pivx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Gib eine Ethf Adresse ein welche mit BIP 38 verschlüsselt werden soll. Gib ein Passwort in die mittleren Box ein. Drücke auf verschlüsseln, um den privaten schlüssel zu errechenen.</translation>
+        <source>Enter a Ethf Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Gib eine ETHF Adresse ein welche mit BIP 38 verschlüsselt werden soll. Gib ein Passwort in die mittleren Box ein. Drücke auf verschlüsseln, um den privaten schlüssel zu errechenen.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The Ethf address to sign the message with</source>
-        <translation>Ethf Adresse mit welcher die Nachricht signiert werden soll</translation>
+        <source>The ETHF address to sign the message with</source>
+        <translation>ETHF Adresse mit welcher die Nachricht signiert werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Kopiert die aktuelle Signatur in den Zwischenspeicher</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Signiere die Nachricht um zu Beweisen, dass du diese Ethf Adresse besitzt</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Signiere die Nachricht um zu Beweisen, dass du diese ETHF Adresse besitzt</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Geben Sie den BIP 38 verschlüsselten privaten Schlüssel ein. Geben Sie die Passphrase im mittleren Feld ein. Klicken Sie auf Entschlüsselung, um den privaten Schlüssel zu berechnen. Nachdem der Schlüssel entschlüsselt wurde, klicken Sie auf 'Adresse importieren', fügen Sie diesen privaten Schlüssel der Wallet hinzu.</translation>
     </message>
     <message>
-        <source>The Ethf address the message was signed with</source>
-        <translation>Die Ethf Adresse mit welcher die Nachricht signiert wurde.</translation>
+        <source>The ETHF address the message was signed with</source>
+        <translation>Die ETHF Adresse mit welcher die Nachricht signiert wurde.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
-        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen Ethf-Adresse signiert wurde.</translation>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
+        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen ETHF-Adresse signiert wurde.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -602,16 +602,16 @@
         <translation>Registerkartenleiste</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
-        <source>Send coins to a Ethf address</source>
-        <translation>An eine Ethf-Adresse überweisen</translation>
+        <source>Send coins to a ETHF address</source>
+        <translation>An eine ETHF-Adresse überweisen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Zahlung anfordern (QR-Code Generierung und pivx: URIs)</translation>
+        <source>Request payments (generates QR codes and ethf: URIs)</source>
+        <translation>Zahlung anfordern (QR-Code Generierung und ethf: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -622,24 +622,24 @@
         <translation>Masternodes durchsuchen</translation>
     </message>
     <message>
-        <source>&amp;About Ethereum Future Core</source>
-        <translation>Über.Ethereum Future Core</translation>
+        <source>&amp;About ETHF Core</source>
+        <translation>Über.ETHF Core</translation>
     </message>
     <message>
-        <source>Show information about Ethereum Future Core</source>
-        <translation>Zeigt Informationen über Ethereum Future Core</translation>
+        <source>Show information about ETHF Core</source>
+        <translation>Zeigt Informationen über ETHF Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Ethf</source>
-        <translation>Konfiguration von Ethf verändern</translation>
+        <source>Modify configuration options for ETHF</source>
+        <translation>Konfiguration von ETHF verändern</translation>
     </message>
     <message>
-        <source>Sign messages with your Ethf addresses to prove you own them</source>
-        <translation>Unterschreibt eine Nachricht mit Ihrer Ethf-Adresse und beweist, dass sie Ihnen gehört</translation>
+        <source>Sign messages with your ETHF addresses to prove you own them</source>
+        <translation>Unterschreibt eine Nachricht mit Ihrer ETHF-Adresse und beweist, dass sie Ihnen gehört</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Ethf addresses</source>
-        <translation>Überprüft eine Nachricht um zu prüfen ob diese mit einer bestimmten Ethf-Adresse signiert wurde</translation>
+        <source>Verify messages to ensure they were signed with specified ETHF addresses</source>
+        <translation>Überprüft eine Nachricht um zu prüfen ob diese mit einer bestimmten ETHF-Adresse signiert wurde</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Öffne Masternode Einstellungsdatei</translation>
     </message>
     <message>
-        <source>Open a Ethf: URI or payment request</source>
-        <translation>Öffne eine Ethf: URI or Zahlungsanfrage</translation>
+        <source>Open a ETHF: URI or payment request</source>
+        <translation>Öffne eine ETHF: URI or Zahlungsanfrage</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Blockchain Betrachter Fenster</translation>
     </message>
     <message>
-        <source>Show the Ethereum Future Core help message to get a list with possible Ethf command-line options</source>
-        <translation>Zeige die Ethf-Core Hilfe, um mögliche Ethf Kommando-Zeilen-Optionen anzuzeigen</translation>
+        <source>Show the ETHF Core help message to get a list with possible ETHF command-line options</source>
+        <translation>Zeige die ETHF-Core Hilfe, um mögliche ETHF Kommando-Zeilen-Optionen anzuzeigen</translation>
     </message>
     <message>
-        <source>Ethereum Future Core client</source>
-        <translation>Ethereum Future Core Client</translation>
+        <source>ETHF Core client</source>
+        <translation>ETHF Core Client</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -812,8 +812,8 @@ Adresse: %4</translation>
         <translation>TextEtikett</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
-        <translation>Nicht alle Transaktionen können anzezeigt werden. Um alle Transaktionen zu sehen, müssen sie die Option  "txindex=1" in der "pivx.conf" Konfigurationsdatei hinzufügen.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ethf.conf).</source>
+        <translation>Nicht alle Transaktionen können anzezeigt werden. Um alle Transaktionen zu sehen, müssen sie die Option  "txindex=1" in der "ethf.conf" Konfigurationsdatei hinzufügen.</translation>
     </message>
 </context>
 <context>
@@ -1113,8 +1113,8 @@ Adresse: %4</translation>
         <translation>Zahlungsadresse bearbeiten</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Ethf address.</source>
-        <translation>Die eingegebene Adresse "%1" ist keine gültige Ethf-Adresse.</translation>
+        <source>The entered address "%1" is not a valid ETHF address.</source>
+        <translation>Die eingegebene Adresse "%1" ist keine gültige ETHF-Adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1159,16 +1159,16 @@ Adresse: %4</translation>
         <translation>Version</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-Bit)</translation>
     </message>
     <message>
-        <source>About Ethereum Future Core</source>
-        <translation>Über Ethereum Future Core</translation>
+        <source>About ETHF Core</source>
+        <translation>Über ETHF Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1214,16 +1214,16 @@ Adresse: %4</translation>
         <translation>Willkommen</translation>
     </message>
     <message>
-        <source>Welcome to Ethereum Future Core.</source>
-        <translation>Willkommen zu Ethereum Future Core.</translation>
+        <source>Welcome to ETHF Core.</source>
+        <translation>Willkommen zu ETHF Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Ethereum Future Core will store its data.</source>
-        <translation>Da dies das erste Mal ist, dass Sie Ethereum Future Core starten, legen Sie jetzt bitte fest, an welchem Ort die Daten gespeichert werden sollen.</translation>
+        <source>As this is the first time the program is launched, you can choose where ETHF Core will store its data.</source>
+        <translation>Da dies das erste Mal ist, dass Sie ETHF Core starten, legen Sie jetzt bitte fest, an welchem Ort die Daten gespeichert werden sollen.</translation>
     </message>
     <message>
-        <source>Ethereum Future Core will download and store a copy of the Ethf block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Ethereum Future Core wird die Blockchain laden und lokal speichern. Dafür sind mindestens %1GB freier Speicherplatz erforderlich. Der Speicherbedarf wird mit der Zeit anwachsen. Die Wallet wird ebenfalls in diesem Verzeichnis gespeichert.</translation>
+        <source>ETHF Core will download and store a copy of the ETHF block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>ETHF Core wird die Blockchain laden und lokal speichern. Dafür sind mindestens %1GB freier Speicherplatz erforderlich. Der Speicherbedarf wird mit der Zeit anwachsen. Die Wallet wird ebenfalls in diesem Verzeichnis gespeichert.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1234,8 +1234,8 @@ Adresse: %4</translation>
         <translation>Ein benutzerdefiniertes Datenverzeichnis verwenden:</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1372,12 +1372,12 @@ Adresse: %4</translation>
         <translation>Zieladresse eingeben</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Ethf addresses after it matures.
-To Add: enter percentage to give and Ethf address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other ETHF addresses after it matures.
+To Add: enter percentage to give and ETHF address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiSend ermöglicht es automatisch bis zu 100% Ihrer Stake- oder Masternode-Belohnung zu einer Liste von anderen Ethf-Adressen zu senden.
-Zum hinzufügen: Gebe den Prozentsätze ein, um die Ethf-Adressen des MultiSend-Vektor hinzuzufügen.
+        <translation>MultiSend ermöglicht es automatisch bis zu 100% Ihrer Stake- oder Masternode-Belohnung zu einer Liste von anderen ETHF-Adressen zu senden.
+Zum hinzufügen: Gebe den Prozentsätze ein, um die ETHF-Adressen des MultiSend-Vektor hinzuzufügen.
 Zum entfernen: Gebe die zu löschende Adresse ein und drücke löschen.
 MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translation>
     </message>
@@ -1705,8 +1705,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Betrag</translation>
     </message>
     <message>
-        <source>Enter a Ethf address (e.g. %1)</source>
-        <translation>Ethf-Adresse eingeben (z.B. %1)</translation>
+        <source>Enter a ETHF address (e.g. %1)</source>
+        <translation>ETHF-Adresse eingeben (z.B. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2106,8 +2106,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>E&amp;mpfänger:</translation>
     </message>
     <message>
-        <source>The Ethf address to send the payment to</source>
-        <translation>Ethf-Adresse, an die überwiesen werden soll</translation>
+        <source>The ETHF address to send the payment to</source>
+        <translation>ETHF-Adresse, an die überwiesen werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2146,8 +2146,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Nachricht:</translation>
     </message>
     <message>
-        <source>A message that was attached to the Ethf: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Ethf network.</source>
-        <translation>Eine an die Ethf-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Ethf-Netzwerk gesendet.</translation>
+        <source>A message that was attached to the ETHF: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the ETHF network.</source>
+        <translation>Eine an die ETHF-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das ETHF-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2173,8 +2173,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Ethereum Future Core is shutting down...</source>
-        <translation>Ethereum Future Core wird beendet...</translation>
+        <source>ETHF Core is shutting down...</source>
+        <translation>ETHF Core wird beendet...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2188,8 +2188,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Nachricht &amp;signieren</translation>
     </message>
     <message>
-        <source>The Ethf address to sign the message with</source>
-        <translation>Ethf Adresse mit welcher die Nachricht signiert werden soll</translation>
+        <source>The ETHF address to sign the message with</source>
+        <translation>ETHF Adresse mit welcher die Nachricht signiert werden soll</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2216,16 +2216,16 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Kopiert die aktuelle Signatur in den Zwischenspeicher</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Signiere die Nachricht um zu Beweisen, dass du diese Ethf Adresse besitzt</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Signiere die Nachricht um zu Beweisen, dass du diese ETHF Adresse besitzt</translation>
     </message>
     <message>
-        <source>The Ethf address the message was signed with</source>
-        <translation>Die Ethf Adresse mit welcher die Nachricht signiert wurde.</translation>
+        <source>The ETHF address the message was signed with</source>
+        <translation>Die ETHF Adresse mit welcher die Nachricht signiert wurde.</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
-        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen Ethf-Adresse signiert wurde.</translation>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
+        <translation>Überprüfen Sie die Nachricht, um sicherzustellen, dass sie mit der angegebenen ETHF-Adresse signiert wurde.</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -2263,8 +2263,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethereum Future Core</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2279,8 +2279,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Die Dash Core Entwickler</translation>
     </message>
     <message>
-        <source>The Ethereum Future Core developers</source>
-        <translation>Die Ethereum Future Core Entwickler</translation>
+        <source>The ETHF Core developers</source>
+        <translation>Die ETHF Core Entwickler</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2847,7 +2847,7 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
     </message>
 </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     <message>
         <source>Error</source>
         <translation>Fehler</translation>
@@ -2997,8 +2997,8 @@ MultiSend wird nicht aktiviert bis Sie auf Aktivieren geklickt haben.</translati
         <translation>Wallet gesperrt.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Ethereum Future Core to complete</source>
-        <translation>Wallet musste neu geschrieben werden: Bitte Ethereum Future Core neu starten</translation>
+        <source>Wallet needed to be rewritten: restart ETHF Core to complete</source>
+        <translation>Wallet musste neu geschrieben werden: Bitte ETHF Core neu starten</translation>
     </message>
     <message>
         <source>Wallet options:</source>

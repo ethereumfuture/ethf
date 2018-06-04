@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Ethf addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your ETHF addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Ethf addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your ETHF addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -221,7 +221,7 @@
     </message>
     <message>
         <location line="+9"/>
-        <source>Ethf will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
+        <source>ETHF will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -307,7 +307,7 @@
     </message>
     <message>
         <location line="+6"/>
-        <source>Enter a Pivx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <source>Enter a Ethf Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -318,7 +318,7 @@
     </message>
     <message>
         <location line="-355"/>
-        <source>The Ethf address to sign the message with</source>
+        <source>The ETHF address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -360,7 +360,7 @@
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Ethf address</source>
+        <source>Sign the message to prove you own this ETHF address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -391,12 +391,12 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>The Ethf address the message was signed with</source>
+        <source>The ETHF address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+29"/>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -771,17 +771,17 @@
     <message>
         <location line="-396"/>
         <location line="+831"/>
-        <source>Ethereum Future Core</source>
+        <source>ETHF Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-652"/>
-        <source>Send coins to a Ethf address</source>
+        <source>Send coins to a ETHF address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
+        <source>Request payments (generates QR codes and ethf: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -796,27 +796,27 @@
     </message>
     <message>
         <location line="+29"/>
-        <source>&amp;About Ethereum Future Core</source>
+        <source>&amp;About ETHF Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show information about Ethereum Future Core</source>
+        <source>Show information about ETHF Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Modify configuration options for Ethf</source>
+        <source>Modify configuration options for ETHF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>Sign messages with your Ethf addresses to prove you own them</source>
+        <source>Sign messages with your ETHF addresses to prove you own them</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Ethf addresses</source>
+        <source>Verify messages to ensure they were signed with specified ETHF addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -856,7 +856,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Open a Ethf: URI or payment request</source>
+        <source>Open a ETHF: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -871,17 +871,17 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Show the Ethereum Future Core help message to get a list with possible Ethf command-line options</source>
+        <source>Show the ETHF Core help message to get a list with possible ETHF command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+201"/>
-        <source>Ethereum Future Core client</source>
+        <source>ETHF Core client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location line="+190"/>
-        <source>%n active connection(s) to Ethf network</source>
+        <source>%n active connection(s) to ETHF network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1077,7 +1077,7 @@ Address: %4
     </message>
     <message>
         <location filename="../blockexplorer.cpp" line="+473"/>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (ethf.conf).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1456,7 +1456,7 @@ Address: %4
     </message>
     <message>
         <location line="+67"/>
-        <source>The entered address &quot;%1&quot; is not a valid Ethf address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid ETHF address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1512,7 +1512,7 @@ Address: %4
     </message>
     <message>
         <location line="+0"/>
-        <source>Ethereum Future Core</source>
+        <source>ETHF Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1523,7 +1523,7 @@ Address: %4
     </message>
     <message>
         <location line="+4"/>
-        <source>About Ethereum Future Core</source>
+        <source>About ETHF Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1581,17 +1581,17 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Ethereum Future Core.</source>
+        <source>Welcome to ETHF Core.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Ethereum Future Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where ETHF Core will store its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Ethereum Future Core will download and store a copy of the Ethf block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>ETHF Core will download and store a copy of the ETHF block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1606,7 +1606,7 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+77"/>
-        <source>Ethereum Future Core</source>
+        <source>ETHF Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1782,8 +1782,8 @@ Address: %4
     </message>
     <message>
         <location line="+16"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Ethf addresses after it matures.
-To Add: enter percentage to give and Ethf address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other ETHF addresses after it matures.
+To Add: enter percentage to give and ETHF address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
         <translation type="unfinished"></translation>
@@ -1948,12 +1948,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 2 separate masternodes to mix funds up to 1000 ETHF</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ETHF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Use 8 separate masternodes to mix funds up to 1000 ETHF</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 ETHF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1963,12 +1963,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is the quickest and will cost about ~0.025 ETHF to anonymize 1000 ETHF</source>
+        <source>This option is the quickest and will cost about ~0.025 ETHF to anonymize 10000 ETHF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>This option is moderately fast and will cost about 0.05 ETHF to anonymize 1000 ETHF</source>
+        <source>This option is moderately fast and will cost about 0.05 ETHF to anonymize 10000 ETHF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1978,7 +1978,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>0.1 ETHF per 1000 ETHF you anonymize.</source>
+        <source>0.1 ETHF per 10000 ETHF you anonymize.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1990,17 +1990,17 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="-27"/>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Ethf&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening ETHF&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Ethf&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening ETHF&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Ethf&apos;s configuration screen.</source>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening ETHF&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2076,7 +2076,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+33"/>
-        <source>Automatically open the Ethf client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the ETHF client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2101,12 +2101,12 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="-179"/>
-        <source>Automatically start Ethf after logging in to the system.</source>
+        <source>Automatically start ETHF after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Ethf on system login</source>
+        <source>&amp;Start ETHF on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2126,7 +2126,7 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+15"/>
-        <source>Amount of Ethf to keep anonymized</source>
+        <source>Amount of ETHF to keep anonymized</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2161,13 +2161,13 @@ Please check the address and try again.</source>
     </message>
     <message>
         <location line="+192"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Ethf.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting ETHF.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/ethf-project/ethf-project-translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2177,7 +2177,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Connect to the Ethf network through a SOCKS5 proxy.</source>
+        <source>Connect to the ETHF network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2374,7 +2374,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
         <location line="+10"/>
         <location line="+1015"/>
         <location line="+93"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Ethf network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ETHF network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2661,12 +2661,12 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="-108"/>
-        <source>Cannot start pivx: click-to-pay handler</source>
+        <source>Cannot start ethf: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+114"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Ethf address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid ETHF address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2774,7 +2774,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+113"/>
-        <source>Enter a Ethf address (e.g. %1)</source>
+        <source>Enter a ETHF address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2969,7 +2969,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+79"/>
-        <source>Open the Ethf debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the ETHF debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3181,7 +3181,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="-36"/>
-        <source>Welcome to the Ethf RPC console.</source>
+        <source>Welcome to the ETHF RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3272,12 +3272,12 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="-37"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Ethf network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the ETHF network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Ethf network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the ETHF network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3641,7 +3641,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     <message>
         <location line="+33"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Ethf transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ETHF transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3774,7 +3774,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+632"/>
-        <source>Warning: Invalid Ethf address</source>
+        <source>Warning: Invalid ETHF address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3918,7 +3918,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Ethf address to send the payment to</source>
+        <source>The ETHF address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3972,7 +3972,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the Ethf: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Ethf network.</source>
+        <source>A message that was attached to the ETHF: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the ETHF network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4007,7 +4007,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+75"/>
-        <source>Ethereum Future Core is shutting down...</source>
+        <source>ETHF Core is shutting down...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4035,7 +4035,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Ethf address to sign the message with</source>
+        <source>The ETHF address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4077,17 +4077,17 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Ethf address</source>
+        <source>Sign the message to prove you own this ETHF address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+106"/>
-        <source>The Ethf address the message was signed with</source>
+        <source>The ETHF address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4202,7 +4202,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+36"/>
-        <source>Ethereum Future Core</source>
+        <source>ETHF Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4222,7 +4222,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>The Ethereum Future Core developers</source>
+        <source>The ETHF Core developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4988,9 +4988,9 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
 </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     <message>
-        <location filename="../pivxstrings.cpp" line="+12"/>
+        <location filename="../ethfstrings.cpp" line="+12"/>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation type="unfinished">(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>
     </message>
@@ -5021,7 +5021,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>Cannot obtain a lock on data directory %s. Ethereum Future Core is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. ETHF Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5046,7 +5046,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Disable all Ethf specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all ETHF specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5236,22 +5236,22 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+4"/>
-        <source>To use pivxd, or the -server option to pivx-qt, you must set an rpcpassword in the configuration file:
+        <source>To use ethfd, or the -server option to ethf-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=pivxrpc
+rpcuser=ethfrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;ETHF Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Unable to bind to %s on this computer. Ethereum Future Core is probably already running.</source>
+        <source>Unable to bind to %s on this computer. ETHF Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5261,12 +5261,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+2"/>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 1000 ETHF.</source>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 ETHF.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 ETHF.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 ETHF.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5286,7 +5286,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Ethereum Future Core will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong ETHF Core will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5326,8 +5326,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>(51472 could be used only on mainnet)</source>
-        <translation type="unfinished">(51472 could be used only on mainnet)</translation>
+        <source>(52545 could be used only on mainnet)</source>
+        <translation type="unfinished">(52545 could be used only on mainnet)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5341,7 +5341,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>(must be 51472 for mainnet)</source>
+        <source>(must be 52545 for mainnet)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5471,12 +5471,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Copyright (C) 2015-%i The Ethereum Future Core Developers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Copyright (C) 2017-%i The Ethereum Future Core Developers</source>
+        <source>Copyright (C) 2015-%i The ETHF Core Developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5566,7 +5561,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Ethereum Future Core</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of ETHF Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5706,7 +5701,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Initialization sanity check failed. Ethereum Future Core is shutting down.</source>
+        <source>Initialization sanity check failed. ETHF Core is shutting down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6481,7 +6476,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ethf Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Ethereum Future Core to complete</source>
+        <source>Wallet needed to be rewritten: restart ETHF Core to complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

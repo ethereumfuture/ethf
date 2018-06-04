@@ -3,15 +3,13 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-
 #include "primitives/block.h"
 
 #include "hash.h"
-#include "tinyformat.h"
 #include "script/standard.h"
 #include "script/sign.h"
+#include "tinyformat.h"
 #include "utilstrencodings.h"
-#include "crypto/common.h"
 #include "util.h"
 
 uint256 CBlockHeader::GetHash() const
@@ -101,7 +99,7 @@ std::vector<uint256> CBlock::GetMerkleBranch(int nIndex) const
 uint256 CBlock::CheckMerkleBranch(uint256 hash, const std::vector<uint256>& vMerkleBranch, int nIndex)
 {
     if (nIndex == -1)
-        return uint256();
+		return uint256();
     for (std::vector<uint256>::const_iterator it(vMerkleBranch.begin()); it != vMerkleBranch.end(); ++it)
     {
         if (nIndex & 1)

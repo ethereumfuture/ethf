@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Ethf developers
+// Copyright (c) 2017-2018 The ETHF developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -74,9 +74,9 @@ enum WalletFeature {
 enum AvailableCoinsType {
     ALL_COINS = 1,
     ONLY_DENOMINATED = 2,
-    ONLY_NOT10000IFMN = 3,
-    ONLY_NONDENOMINATED_NOT10000IFMN = 4, // ONLY_NONDENOMINATED and not 10000 ETHF at the same time
-    ONLY_10000 = 5                        // find masternode outputs including locked ones (use with caution)
+    ONLY_NOT1000IFMN = 3,
+    ONLY_NONDENOMINATED_NOT1000IFMN = 4, // ONLY_NONDENOMINATED and not 1000 ETHF at the same time
+    ONLY_1000 = 5                        // find masternode outputs including locked ones (use with caution)
 };
 
 struct CompactTallyItem {
@@ -166,7 +166,6 @@ public:
     bool SelectCoinsDark(CAmount nValueMin, CAmount nValueMax, std::vector<CTxIn>& setCoinsRet, CAmount& nValueRet, int nObfuscationRoundsMin, int nObfuscationRoundsMax) const;
     bool SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount nValueMax, std::vector<CTxIn>& vCoinsRet, std::vector<COutput>& vCoinsRet2, CAmount& nValueRet, int nObfuscationRoundsMin, int nObfuscationRoundsMax);
     bool SelectCoinsDarkDenominated(CAmount nTargetValue, std::vector<CTxIn>& setCoinsRet, CAmount& nValueRet) const;
-
     bool HasCollateralInputs(bool fOnlyConfirmed = true) const;
     bool IsCollateralAmount(CAmount nInputAmount) const;
     int CountInputsWithAmount(CAmount nInputAmount);
@@ -355,12 +354,6 @@ public:
     //! Adds a watch-only address to the store, without saving it to disk (used by LoadWallet)
     bool LoadWatchOnly(const CScript& dest);
 
-    //! Adds a MultiSig address to the store, and saves it to disk.
-    bool AddMultiSig(const CScript& dest);
-    bool RemoveMultiSig(const CScript& dest);
-    //! Adds a MultiSig address to the store, without saving it to disk (used by LoadWallet)
-    bool LoadMultiSig(const CScript& dest);
-
     bool Unlock(const SecureString& strWalletPassphrase, bool anonimizeOnly = false);
     bool ChangeWalletPassphrase(const SecureString& strOldWalletPassphrase, const SecureString& strNewWalletPassphrase);
     bool EncryptWallet(const SecureString& strWalletPassphrase);
@@ -449,7 +442,7 @@ public:
     bool IsDenominated(const CTxIn& txin) const;
     bool IsDenominated(const CTransaction& tx) const;
 
-    bool IsDenominatedAmount(int64_t nInputAmount) const;
+    bool IsDenominatedAmount(CAmount nInputAmount) const;
 
     isminetype IsMine(const CTxIn& txin) const;
     CAmount GetDebit(const CTxIn& txin, const isminefilter& filter) const;
@@ -574,9 +567,6 @@ public:
 
     /** Watch-only address added */
     boost::signals2::signal<void(bool fHaveWatchOnly)> NotifyWatchonlyChanged;
-
-    /** MultiSig address added */
-    boost::signals2::signal<void(bool fHaveMultiSig)> NotifyMultiSigChanged;
 };
 
 /** A key allocated from the key pool. */

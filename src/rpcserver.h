@@ -95,7 +95,7 @@ public:
 };
 
 /**
- * Ethf RPC command dispatcher.
+ * ETHF RPC command dispatcher.
  */
 class CRPCTable
 {

@@ -2,10 +2,10 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
+// Copyright (c) 2017-2018 The ETHF developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <math.h>
 #include "main.h"
 
 #include "addrman.h"
@@ -42,7 +42,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-#error "Ethf cannot be compiled without assertions."
+#error "ETHF cannot be compiled without assertions."
 #endif
 
 /**
@@ -966,7 +966,7 @@ bool GetCoinAge(const CTransaction& tx, const unsigned int nTxTime, uint64_t& nC
 
 bool MoneyRange(CAmount nValueOut)
 {
-	return nValueOut >= 0 && nValueOut <= Params().MaxMoneyOut();
+    return nValueOut >= 0 && nValueOut <= Params().MaxMoneyOut();
 }
 
 bool CheckTransaction(const CTransaction& tx, CValidationState& state)
@@ -989,7 +989,7 @@ bool CheckTransaction(const CTransaction& tx, CValidationState& state)
         if (txout.IsEmpty() && !tx.IsCoinBase() && !tx.IsCoinStake())
             return state.DoS(100, error("CheckTransaction(): txout empty for user transaction"));
 
-        if (txout.nValue < 0)
+	 	if (txout.nValue < 0)
             return state.DoS(100, error("CheckTransaction() : txout.nValue negative"),
                 REJECT_INVALID, "bad-txns-vout-negative");
         if (txout.nValue > Params().MaxMoneyOut())
@@ -1011,10 +1011,9 @@ bool CheckTransaction(const CTransaction& tx, CValidationState& state)
     }
 
     if (tx.IsCoinBase()) {
-	    if (tx.vin[0].scriptSig.size() < 2 || tx.vin[0].scriptSig.size() > 150)
-
-            	return state.DoS(100, error("CheckTransaction() : coinbase script size=%d", tx.vin[0].scriptSig.size()),
-                	REJECT_INVALID, "bad-cb-length");
+        if (tx.vin[0].scriptSig.size() < 2 || tx.vin[0].scriptSig.size() > 150)
+            return state.DoS(100, error("CheckTransaction() : coinbase script size=%d", tx.vin[0].scriptSig.size()),
+                REJECT_INVALID, "bad-cb-length");
     } else {
         BOOST_FOREACH (const CTxIn& txin, tx.vin)
             if (txin.prevout.IsNull())
@@ -1079,7 +1078,7 @@ CAmount GetMinRelayFee(const CTransaction& tx, unsigned int nBytes, bool fAllowF
     }
 
     if (!MoneyRange(nMinFee))
-	    nMinFee = Params().MaxMoneyOut();
+        nMinFee = Params().MaxMoneyOut();
     return nMinFee;
 }
 
@@ -1610,7 +1609,7 @@ double ConvertBitsToDouble(unsigned int nBits)
     }
 
     return dDiff;
-} 
+}
 
 int64_t GetBlockValue(int nHeight)
 {
@@ -1622,6 +1621,8 @@ int64_t GetBlockValue(int nHeight)
 	if (nHeight == 0) { 
 		//nSubsidy = 720000.00 * COIN;
 		nSubsidy = 711000.00 * COIN;
+	} else if (nHeight == 57602) { //for test of POS
+		nSubsidy = 150000.00 * COIN;
     } else if (nHeight <= 345600) {
 		nSubsidy = 10 * COIN;
 
@@ -1641,9 +1642,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 {
     int64_t ret = 0;
 
-    if (nHeight < Params().RAMP_TO_BLOCK()) {
+    if (nHeight < 120) {
 	ret = 0;
-    } else if (nHeight <= 28800 && nHeight >= Params().RAMP_TO_BLOCK()) {
+    } else if (nHeight <= 28800 && nHeight >= 120) {
         ret = blockValue *20/100;
     } else if (nHeight <= 57600 && nHeight > 28800) {
 	ret = blockValue *25/100;
@@ -2306,8 +2307,10 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
     unsigned int flags = fStrictPayToScriptHash ? SCRIPT_VERIFY_P2SH : SCRIPT_VERIFY_NONE;
 
-    // DERSIG (BIP66) rules:
-    flags |= SCRIPT_VERIFY_DERSIG;
+    // Start enforcing the DERSIG (BIP66) rules, for block.nVersion=3 blocks, when 75% of the network has upgraded:
+    if (block.nVersion >= 3 && CBlockIndex::IsSuperMajority(3, pindex->pprev, Params().EnforceBlockUpgradeMajority())) {
+        flags |= SCRIPT_VERIFY_DERSIG;
+    }
 
     CBlockUndo blockundo;
 
@@ -2348,8 +2351,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
             }
 
             if (!tx.IsCoinStake())
-		    nFees += view.GetValueIn(tx) - tx.GetValueOut();
-
+                nFees += view.GetValueIn(tx) - tx.GetValueOut();
             nValueIn += view.GetValueIn(tx);
 
             std::vector<CScriptCheck> vChecks;
@@ -2381,15 +2383,16 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     nTimeConnect += nTime1 - nTimeStart;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
 
+    //PoW phase redistributed fees to miner. PoS stage destroys fees.
     CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
+
     if (block.IsProofOfWork())
-	    nExpectedMint += nFees;
+        nExpectedMint += nFees;
 
     if (!IsBlockValueValid(block, nExpectedMint, pindex->nMint)) {
         return state.DoS(100,
             error("ConnectBlock() : reward pays too much (actual=%s vs limit=%s)",
-	        FormatMoney(pindex->nMint), FormatMoney(nExpectedMint)),
-
+                FormatMoney(pindex->nMint), FormatMoney(nExpectedMint)),
             REJECT_INVALID, "bad-cb-amount");
     }
 
@@ -3236,9 +3239,11 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
 
     // Check that the header is valid (particularly PoW).  This is mostly
     // redundant with the call in AcceptBlockHeader.
-    if (block.IsProofOfWork() && !CheckBlockHeader(block, state, fCheckPOW))
-        return state.DoS(100, error("CheckBlock() : CheckBlockHeader failed"),
-            REJECT_INVALID, "bad-header", true);
+	if (fCheckPOW) {  
+		if (!CheckBlockHeader(block, state, block.IsProofOfWork()))
+			return state.DoS(100, error("CheckBlock() : CheckBlockHeader failed"),
+				REJECT_INVALID, "bad-header", true);
+	}
 
     // Check timestamp
     LogPrint("debug", "%s: block=%s  is proof of stake=%d\n", __func__, block.GetHash().ToString().c_str(), block.IsProofOfStake());
@@ -3330,11 +3335,17 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
+        // ETHF
+        // It is entierly possible that we don't have enough data and this could fail
+        // (i.e. the block could indeed be valid). Store the block for later consideration
+        // but issue an initial reject message.
+        // The case also exists that the sending peer could not have enough data to see
+        // that this block is invalid, so don't issue an outright ban.
         if (nHeight != 0 && !IsInitialBlockDownload()) {
             if (!IsBlockPayeeValid(block, nHeight)) {
                 mapRejectedBlocks.insert(make_pair(block.GetHash(), GetTime()));
                 return state.DoS(0, error("CheckBlock() : Couldn't find masternode/budget payment"),
-			REJECT_INVALID, "bad-cb-payee");
+                        REJECT_INVALID, "bad-cb-payee");
             }
         } else {
             if (fDebug)
@@ -3366,6 +3377,7 @@ bool CheckWork(const CBlock block, CBlockIndex* const pindexPrev)
         return error("%s : null pindexPrev for block %s", __func__, block.GetHash().ToString().c_str());
 
     unsigned int nBitsRequired = GetNextWorkRequired(pindexPrev, &block);
+
 
     if (block.nBits != nBitsRequired)
         return error("%s : incorrect proof of work at %d", __func__, pindexPrev->nHeight + 1);
@@ -3418,15 +3430,40 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
         return state.DoS(0, error("%s : forked chain older than last checkpoint (height %d)", __func__, nHeight));
 
     // Reject block.nVersion=1 blocks when 95% (75% on testnet) of the network has upgraded:
-    if (block.nVersion < 2) {
+    if (block.nVersion < 2 &&
+        CBlockIndex::IsSuperMajority(2, pindexPrev, Params().RejectBlockOutdatedMajority())) {
         return state.Invalid(error("%s : rejected nVersion=1 block", __func__),
             REJECT_OBSOLETE, "bad-version");
     }
 
     // Reject block.nVersion=2 blocks when 95% (75% on testnet) of the network has upgraded:
-    if (block.nVersion < 3) {
+    if (block.nVersion < 3 && CBlockIndex::IsSuperMajority(3, pindexPrev, Params().RejectBlockOutdatedMajority())) {
         return state.Invalid(error("%s : rejected nVersion=2 block", __func__),
             REJECT_OBSOLETE, "bad-version");
+    }
+
+    return true;
+}
+
+bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIndex* const pindexPrev)
+{
+    const int nHeight = pindexPrev == NULL ? 0 : pindexPrev->nHeight + 1;
+
+    // Check that all transactions are finalized
+    BOOST_FOREACH (const CTransaction& tx, block.vtx)
+        if (!IsFinalTx(tx, nHeight, block.GetBlockTime())) {
+            return state.DoS(10, error("%s : contains a non-final transaction", __func__), REJECT_INVALID, "bad-txns-nonfinal");
+        }
+
+    // Enforce block.nVersion=2 rule that the coinbase starts with serialized block height
+    // if 750 of the last 1,000 blocks are version 2 or greater (51/100 if testnet):
+    if (block.nVersion >= 2 &&
+        CBlockIndex::IsSuperMajority(2, pindexPrev, Params().EnforceBlockUpgradeMajority())) {
+        CScript expect = CScript() << nHeight;
+        if (block.vtx[0].vin[0].scriptSig.size() < expect.size() ||
+            !std::equal(expect.begin(), expect.end(), block.vtx[0].vin[0].scriptSig.begin())) {
+            return state.DoS(100, error("%s : block height mismatch in coinbase", __func__), REJECT_INVALID, "bad-cb-height");
+        }
     }
 
     return true;
@@ -3496,7 +3533,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
             return state.DoS(100, error("%s : prev block invalid", __func__), REJECT_INVALID, "bad-prevblk");
     }
 
-    if (block.GetHash() != Params().HashGenesisBlock() && !CheckWork(block, pindexPrev))
+	if (block.GetHash() != Params().HashGenesisBlock() && !CheckWork(block, pindexPrev))
         return false;
 
     if (!AcceptBlockHeader(block, state, &pindex))
@@ -3508,7 +3545,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
         return true;
     }
 
-    if ((!CheckBlock(block, state))) {
+    if ((!CheckBlock(block, state)) || !ContextualCheckBlock(block, state, pindex->pprev)) {
         if (state.IsInvalid() && !state.CorruptionPossible()) {
             pindex->nStatus |= BLOCK_FAILED_VALID;
             setDirtyBlockIndex.insert(pindex);
@@ -3536,6 +3573,18 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
     }
 
     return true;
+}
+
+bool CBlockIndex::IsSuperMajority(int minVersion, const CBlockIndex* pstart, unsigned int nRequired)
+{
+    unsigned int nToCheck = Params().ToCheckBlockUpgradeMajority();
+    unsigned int nFound = 0;
+    for (unsigned int i = 0; i < nToCheck && nFound < nRequired && pstart != NULL; i++) {
+        if (pstart->nVersion >= minVersion)
+            ++nFound;
+        pstart = pstart->pprev;
+    }
+    return (nFound >= nRequired);
 }
 
 /** Turn the lowest '1' bit in the binary representation of a number into a '0'. */
@@ -3675,6 +3724,8 @@ bool TestBlockValidity(CValidationState& state, const CBlock& block, CBlockIndex
     if (!ContextualCheckBlockHeader(block, state, pindexPrev))
         return false;
     if (!CheckBlock(block, state, fCheckPOW, fCheckMerkleRoot))
+        return false;
+    if (!ContextualCheckBlock(block, state, pindexPrev))
         return false;
     if (!ConnectBlock(block, state, &indexDummy, viewNew, true))
         return false;
@@ -4354,7 +4405,7 @@ string GetWarnings(string strFor)
     string strRPC;
 
     if (!CLIENT_VERSION_IS_RELEASE)
-        strStatusBar = _("This is a pre-release test build - use at your own risk - do not use for mining or merchant applications");
+        strStatusBar = _("This is a pre-release test build - use at your own risk - do not use for staking or merchant applications!");
 
     if (GetBoolArg("-testsafemode", false))
         strStatusBar = strRPC = "testsafemode enabled";
@@ -4718,8 +4769,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         CAddress addrFrom;
         uint64_t nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
-	if (pfrom->DisconnectOldProtocol(ActiveProtocol(), strCommand))
-		return false;
+        if (pfrom->DisconnectOldProtocol(ActiveProtocol(), strCommand))
+            return false;
 
         if (pfrom->nVersion == 10300)
             pfrom->nVersion = 300;
@@ -5265,7 +5316,9 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                     TRY_LOCK(cs_main, lockMain);
                     if (lockMain) Misbehaving(pfrom->GetId(), nDoS);
                 }
-		pfrom->DisconnectOldProtocol(ActiveProtocol(), strCommand);
+
+                //disconnect this node if its old protocol version
+                pfrom->DisconnectOldProtocol(ActiveProtocol(), strCommand);
             }
         }
 
@@ -5502,8 +5555,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 // Note: whenever a protocol update is needed toggle between both implementations (comment out the formerly active one)
 //       so we can leave the existing clients untouched (old SPORK will stay on so they don't see even older clients). 
 //       Those old clients won't react to the changes of the other (new) SPORK because at the time of their implementation
-//
-
+//       it was the one which was commented out
 int ActiveProtocol()
 {
 
@@ -5527,11 +5579,13 @@ int ActiveProtocol()
 
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
+
 // requires LOCK(cs_vRecvMsg)
 bool ProcessMessages(CNode* pfrom)
 {
-    //if (fDebug)
-    //    LogPrintf("ProcessMessages(%u messages)\n", pfrom->vRecvMsg.size());
+
+	if (fDebug)
+        LogPrintf("ProcessMessages(%u)\n", pfrom->vRecvMsg.size());
 
     //
     // Message format
@@ -5558,10 +5612,10 @@ bool ProcessMessages(CNode* pfrom)
         // get next message
         CNetMessage& msg = *it;
 
-        //if (fDebug)
-        //    LogPrintf("ProcessMessages(message %u msgsz, %u bytes, complete:%s)\n",
-        //            msg.hdr.nMessageSize, msg.vRecv.size(),
-        //            msg.complete() ? "Y" : "N");
+        if (fDebug)
+            LogPrintf("ProcessMessages(message %u msgsz, %u bytes, complete:%s, peer=%d)\n",
+                    msg.hdr.nMessageSize, msg.vRecv.size(),
+                    msg.complete() ? "Y" : "N", pfrom->id);
 
         // end, if an incomplete message is found
         if (!msg.complete())
@@ -5588,6 +5642,7 @@ bool ProcessMessages(CNode* pfrom)
         // Message size
         unsigned int nMessageSize = hdr.nMessageSize;
 
+
         // Checksum
         CDataStream& vRecv = msg.vRecv;
         uint256 hash = Hash(vRecv.begin(), vRecv.begin() + nMessageSize);
@@ -5598,6 +5653,7 @@ bool ProcessMessages(CNode* pfrom)
                 SanitizeString(strCommand), nMessageSize, nChecksum, hdr.nChecksum);
             continue;
         }
+
 
         // Process message
         bool fRet = false;
@@ -5687,7 +5743,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
                     pnode->setAddrKnown.clear();
 
                 // Rebroadcast our address
-                AdvertiseLocal(pnode);
+                AdvertizeLocal(pnode);
             }
             if (!vNodes.empty())
                 nLastRebroadcast = GetTime();

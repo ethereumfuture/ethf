@@ -589,8 +589,9 @@ public:
     bool IsPayToScriptHash() const;
 
     /** Called by IsStandardTx and P2SH/BIP62 VerifyScript (which makes it consensus-critical). */
-    bool IsPushOnly() const;
     bool IsPushOnly(const_iterator pc) const;
+    bool IsPushOnly() const;
+
     /**
      * Returns whether the script is guaranteed to fail at execution,
      * regardless of the initial stack. This allows outputs to be pruned

@@ -1,6 +1,5 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Ethf developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -778,7 +777,7 @@ void CObfuscationPool::ChargeRandomFees()
 
                 Being that Obfuscation has "no fees" we need to have some kind of cost associated
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
-                allow endless transaction that would bloat Ethf and make it unusable. To
+                allow endless transaction that would bloat ETHF and make it unusable. To
                 stop these kinds of attacks 1 in 10 successful transactions are charged. This
                 adds up to a cost of 0.001 ETHF per transaction on average.
             */
@@ -1727,16 +1726,16 @@ bool CObfuscationPool::MakeCollateralAmounts()
 
     // try to use non-denominated and not mn-like funds
     bool success = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
-        nFeeRet, strFail, &coinControl, ONLY_NONDENOMINATED_NOT10000IFMN);
+        nFeeRet, strFail, &coinControl, ONLY_NONDENOMINATED_NOT1000IFMN);
     if (!success) {
         // if we failed (most likeky not enough funds), try to use all coins instead -
         // MN-like funds should not be touched in any case and we can't mix denominated without collaterals anyway
         CCoinControl* coinControlNull = NULL;
-        LogPrintf("MakeCollateralAmounts: ONLY_NONDENOMINATED_NOT10000IFMN Error - %s\n", strFail);
+        LogPrintf("MakeCollateralAmounts: ONLY_NONDENOMINATED_NOT1000IFMN Error - %s\n", strFail);
         success = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
-            nFeeRet, strFail, coinControlNull, ONLY_NOT10000IFMN);
+            nFeeRet, strFail, coinControlNull, ONLY_NOT1000IFMN);
         if (!success) {
-            LogPrintf("MakeCollateralAmounts: ONLY_NOT10000IFMN Error - %s\n", strFail);
+            LogPrintf("MakeCollateralAmounts: ONLY_NOT1000IFMN Error - %s\n", strFail);
             reservekeyCollateral.ReturnKey();
             return false;
         }
@@ -1814,7 +1813,7 @@ bool CObfuscationPool::CreateDenominated(CAmount nTotalValue)
 
     CCoinControl* coinControl = NULL;
     bool success = pwalletMain->CreateTransaction(vecSend, wtx, reservekeyChange,
-        nFeeRet, strFail, coinControl, ONLY_NONDENOMINATED_NOT10000IFMN);
+        nFeeRet, strFail, coinControl, ONLY_NONDENOMINATED_NOT1000IFMN);
     if (!success) {
         LogPrintf("CreateDenominated: Error - %s\n", strFail);
         // TODO: return reservekeyDenom here
@@ -1998,13 +1997,13 @@ int CObfuscationPool::GetDenominations(const std::vector<CTxOut>& vout, bool fSi
 }
 
 
-int CObfuscationPool::GetDenominationsByAmounts(std::vector<int64_t>& vecAmount)
+int CObfuscationPool::GetDenominationsByAmounts(std::vector<CAmount>& vecAmount)
 {
     CScript e = CScript();
     std::vector<CTxOut> vout1;
 
     // Make outputs by looping through denominations, from small to large
-    BOOST_REVERSE_FOREACH (int64_t v, vecAmount) {
+    BOOST_REVERSE_FOREACH (CAmount v, vecAmount) {
         CTxOut o(v, e);
         vout1.push_back(o);
     }

@@ -307,13 +307,13 @@ BOOST_AUTO_TEST_CASE(AreInputsStandard)
     fifteenSigops << OP_15 << OP_CHECKMULTISIG;
     keystore.AddCScript(fifteenSigops);
     txFrom.vout[4].scriptPubKey = GetScriptForDestination(CScriptID(fifteenSigops));
-    txFrom.vout[4].nValue = 5000;
+    txFrom.vout[4].nValue = 1000;
 
     // vout[5/6] are non-standard because they exceed MAX_P2SH_SIGOPS
     CScript sixteenSigops; sixteenSigops << OP_16 << OP_CHECKMULTISIG;
     keystore.AddCScript(sixteenSigops);
     txFrom.vout[5].scriptPubKey = GetScriptForDestination(CScriptID(fifteenSigops));
-    txFrom.vout[5].nValue = 5000;
+    txFrom.vout[5].nValue = 1000;
     CScript twentySigops; twentySigops << OP_CHECKMULTISIG;
     keystore.AddCScript(twentySigops);
     txFrom.vout[6].scriptPubKey = GetScriptForDestination(CScriptID(twentySigops));

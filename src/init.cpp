@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Ethf developers
+// Copyright (c) 2017-2018 The ETHF developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -175,8 +175,6 @@ void PrepareShutdown()
     RenameThread("ethf-shutoff");
     mempool.AddTransactionsUpdated(1);
     StopRPCThreads();
-	ShutdownRPCMining();
-
 #ifdef ENABLE_WALLET
     if (pwalletMain)
         bitdb.Flush(false);
@@ -298,6 +296,7 @@ bool static Bind(const CService& addr, unsigned int flags)
 
 std::string HelpMessage(HelpMessageMode mode)
 {
+
     // When adding new options to the categories, please keep and ensure alphabetical ordering.
     string strUsage = HelpMessageGroup(_("Options:"));
     strUsage += HelpMessageOpt("-?", _("This help message"));
@@ -415,8 +414,10 @@ std::string HelpMessage(HelpMessageMode mode)
     string debugCategories = "addrman, alert, bench, coindb, db, lock, rand, rpc, selectcoins, mempool, net, ethf, (obfuscation, swifttx, masternode, mnpayments, mnbudget)"; // Don't translate these and qt below
     if (mode == HMM_BITCOIN_QT)
         debugCategories += ", qt";
-        strUsage += HelpMessageOpt("-debug=<category>", strprintf(_("Output debugging information (default: %u, supplying <category> is optional)"), 0) + ". " +
-            _("If <category> is not supplied, output all debugging information.") + _("<category> can be:") + " " + debugCategories + ".");
+    strUsage += HelpMessageOpt("-debug=<category>", strprintf(_("Output debugging information (default: %u, supplying <category> is optional)"), 0) + ". " +
+        _("If <category> is not supplied, output all debugging information.") + _("<category> can be:") + " " + debugCategories + ".");
+    if (GetBoolArg("-help-debug", false))
+        strUsage += HelpMessageOpt("-nodebug", "Turn off debugging messages, same as -debug=0");
 #ifdef ENABLE_WALLET
     strUsage += HelpMessageOpt("-gen", strprintf(_("Generate coins (default: %u)"), 0));
     strUsage += HelpMessageOpt("-genproclimit=<n>", strprintf(_("Set the number of threads for coin generation if enabled (-1 = all cores, default: %d)"), 1));
@@ -457,7 +458,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-mnconf=<file>", strprintf(_("Specify masternode configuration file (default: %s)"), "masternode.conf"));
     strUsage += HelpMessageOpt("-mnconflock=<n>", strprintf(_("Lock masternodes from masternode configuration file (default: %u)"), 1));
     strUsage += HelpMessageOpt("-masternodeprivkey=<n>", _("Set the masternode private key"));
-    strUsage += HelpMessageOpt("-masternodeaddr=<n>", strprintf(_("Set external address:port to get to this masternode (example: %s)"), "128.127.106.235:51472"));
+    strUsage += HelpMessageOpt("-masternodeaddr=<n>", strprintf(_("Set external address:port to get to this masternode (example: %s)"), "128.127.106.235:52545"));
     strUsage += HelpMessageOpt("-budgetvotemode=<mode>", _("Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)"));
 
     strUsage += HelpMessageGroup(_("Obfuscation options:"));
@@ -510,9 +511,8 @@ std::string LicenseInfo()
            "\n" +
            FormatParagraph(strprintf(_("Copyright (C) 2015-%i The PIVX Core Developers"), COPYRIGHT_YEAR)) + "\n" +
            "\n" +
-	   FormatParagraph(strprintf(_("Copyright (C) 2017-%i The Ethereum Future Core Developers"), COPYRIGHT_YEAR)) + "\n" +
-	   "\n" +
-           FormatParagraph(_("This is experimental software.")) + "\n" +
+			FormatParagraph(strprintf(_("Copyright (C) 2017-%i The ETHF Core Developers"), COPYRIGHT_YEAR)) + "\n" +
+           "\n" +           FormatParagraph(_("This is experimental software.")) + "\n" +
            "\n" +
            FormatParagraph(_("Distributed under the MIT software license, see the accompanying file COPYING or <http://www.opensource.org/licenses/mit-license.php>.")) + "\n" +
            "\n" +
@@ -602,7 +602,7 @@ void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 }
 
 /** Sanity checks
- *  Ensure that Ethf is running in a usable environment with all
+ *  Ensure that ETHF is running in a usable environment with all
  *  necessary library support.
  */
 bool InitSanityCheck(void)
@@ -888,7 +888,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     // Sanity check
     if (!InitSanityCheck())
-        return InitError(_("Initialization sanity check failed. Ethereum Future Core is shutting down."));
+        return InitError(_("Initialization sanity check failed. ETHF Core is shutting down."));
 
     std::string strDataDir = GetDataDir().string();
 #ifdef ENABLE_WALLET
@@ -896,7 +896,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     if (strWalletFile != boost::filesystem::basename(strWalletFile) + boost::filesystem::extension(strWalletFile))
         return InitError(strprintf(_("Wallet %s resides outside data directory %s"), strWalletFile, strDataDir));
 #endif
-    // Make sure only a single Ethf process is using the data directory.
+    // Make sure only a single ETHF process is using the data directory.
     boost::filesystem::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
@@ -904,7 +904,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     // Wait maximum 10 seconds if an old wallet is still running. Avoids lockup during restart
     if (!lock.timed_lock(boost::get_system_time() + boost::posix_time::seconds(10)))
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Ethereum Future Core is probably already running."), strDataDir));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. ETHF Core is probably already running."), strDataDir));
 
 #ifndef WIN32
     CreatePidFile(GetPidFile(), getpid());
@@ -912,7 +912,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("Ethf version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
+    LogPrintf("ETHF version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
     LogPrintf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
 #ifdef ENABLE_WALLET
     LogPrintf("Using BerkeleyDB version %s\n", DbEnv::version(0, 0, 0));
@@ -936,7 +936,6 @@ bool AppInit2(boost::thread_group& threadGroup)
         if (!sporkManager.SetPrivKey(GetArg("-sporkkey", "")))
             return InitError(_("Unable to sign spork message, wrong key?"));
     }
-	
 
     /* Start the RPC server already.  It will be started in "warmup" mode
      * and not really process calls already (but it will signify connections
@@ -1348,9 +1347,9 @@ bool AppInit2(boost::thread_group& threadGroup)
                              " or address book entries might be missing or incorrect."));
                 InitWarning(msg);
             } else if (nLoadWalletRet == DB_TOO_NEW)
-                strErrors << _("Error loading wallet.dat: Wallet requires newer version of Ethereum Future Core") << "\n";
+                strErrors << _("Error loading wallet.dat: Wallet requires newer version of ETHF Core") << "\n";
             else if (nLoadWalletRet == DB_NEED_REWRITE) {
-                strErrors << _("Wallet needed to be rewritten: restart Ethereum Future Core to complete") << "\n";
+                strErrors << _("Wallet needed to be rewritten: restart ETHF Core to complete") << "\n";
                 LogPrintf("%s", strErrors.str());
                 return InitError(strErrors.str());
             } else
@@ -1590,7 +1589,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     LogPrintf("fLiteMode %d\n", fLiteMode);
     LogPrintf("nSwiftTXDepth %d\n", nSwiftTXDepth);
     LogPrintf("Obfuscation rounds %d\n", nObfuscationRounds);
-    LogPrintf("Anonymize Ethf Amount %d\n", nAnonymizeEthfAmount);
+    LogPrintf("Anonymize ETHF Amount %d\n", nAnonymizeEthfAmount);
     LogPrintf("Budget Mode %s\n", strBudgetMode.c_str());
 
     /* Denominations
@@ -1645,7 +1644,7 @@ bool AppInit2(boost::thread_group& threadGroup)
 #endif
 
     // ********************************************************* Step 12: finished
-	InitRPCMining();
+
     SetRPCWarmupFinished();
     uiInterface.InitMessage(_("Done loading"));
 

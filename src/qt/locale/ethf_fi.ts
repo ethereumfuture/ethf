@@ -62,12 +62,12 @@
         <translation>Vastaanottavat osoitteet</translation>
     </message>
     <message>
-        <source>These are your Ethf addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat sinun Ethf osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your ETHF addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat sinun ETHF osoitteesi maksujen lähetystä varten. Tarkista aina määrä ja vastaanottava osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Ethf addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Nämä ovat sinun Ethf osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
+        <source>These are your ETHF addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Nämä ovat sinun ETHF osoitteesi maksujen vastaanottamista varten. On suositeltavaa käyttää uutta vastaanottavaa osoitetta jokaiselle uudelle rahansiirrolle.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>Ethf will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
-        <translation>Ethf sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella ETHFien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>ETHF will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ETHFs from being stolen by malware infecting your computer.</source>
+        <translation>ETHF sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella ETHFien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -235,8 +235,8 @@
         <translation>&amp;BIP 38 Salaus</translation>
     </message>
     <message>
-        <source>Enter a Pivx Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Syötä Pivx osoite, jonnka tahtoisit salata käyttäen BIP 38.
+        <source>Enter a Ethf Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Syötä Ethf osoite, jonnka tahtoisit salata käyttäen BIP 38.
 Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityisavaimen.</translation>
     </message>
     <message>
@@ -244,8 +244,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Osoite:</translation>
     </message>
     <message>
-        <source>The Ethf address to sign the message with</source>
-        <translation>Ethf osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The ETHF address to sign the message with</source>
+        <translation>ETHF osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -276,8 +276,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Ethf osoitteen</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän ETHF osoitteen</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -300,12 +300,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Syötä BIP 38 salattu yksityisavain. Syötä salausavain laatikkoon. Paina Avaa Salaus tuottaaksesi yksityisavaimen. Kun avain on dekryptattu, painamalla "Import osoite" lisää tämän yksityisavaimen lompakkoon.</translation>
     </message>
     <message>
-        <source>The Ethf address the message was signed with</source>
-        <translation>Ethf osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The ETHF address the message was signed with</source>
+        <translation>ETHF osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
-        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla Ethf osoitteella.</translation>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
+        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla ETHF osoitteella.</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -591,16 +591,16 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>&amp;Apua</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethf Ydin</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Ydin</translation>
     </message>
     <message>
-        <source>Send coins to a Ethf address</source>
-        <translation>Lähetä kolikkoja Ethf osoitteeseen</translation>
+        <source>Send coins to a ETHF address</source>
+        <translation>Lähetä kolikkoja ETHF osoitteeseen</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Pyydä maksuja (Generoi QR koodeja ja pivx: URIja)</translation>
+        <source>Request payments (generates QR codes and ethf: URIs)</source>
+        <translation>Pyydä maksuja (Generoi QR koodeja ja ethf: URIja)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -611,24 +611,24 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Selaa masternodeja</translation>
     </message>
     <message>
-        <source>&amp;About Ethereum Future Core</source>
-        <translation>Ethereum Future Core &amp;ytimestä</translation>
+        <source>&amp;About ETHF Core</source>
+        <translation>ETHF Core &amp;ytimestä</translation>
     </message>
     <message>
-        <source>Show information about Ethereum Future Core</source>
-        <translation>Näytä tietoja Ethf Ytimestä</translation>
+        <source>Show information about ETHF Core</source>
+        <translation>Näytä tietoja ETHF Ytimestä</translation>
     </message>
     <message>
-        <source>Modify configuration options for Ethf</source>
-        <translation>Muokkaa konfiguraatio vaihtoehtoja Ethf:lle</translation>
+        <source>Modify configuration options for ETHF</source>
+        <translation>Muokkaa konfiguraatio vaihtoehtoja ETHF:lle</translation>
     </message>
     <message>
-        <source>Sign messages with your Ethf addresses to prove you own them</source>
+        <source>Sign messages with your ETHF addresses to prove you own them</source>
         <translation>Allekirjoita viestejä todistaaksesi, että omistat ne.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Ethf addresses</source>
-        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä Ethf osoiteella.</translation>
+        <source>Verify messages to ensure they were signed with specified ETHF addresses</source>
+        <translation>Vahvista viestit varmistaaksesi, että ne allekirjoitettiin tietyllä ETHF osoiteella.</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -659,8 +659,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Avaa Masternode konfiguraatiotiedosto</translation>
     </message>
     <message>
-        <source>Open a Ethf: URI or payment request</source>
-        <translation>Avaa Ethf: URI tai pyydä maksua</translation>
+        <source>Open a ETHF: URI or payment request</source>
+        <translation>Avaa ETHF: URI tai pyydä maksua</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -671,12 +671,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Lohkon tutkija näkymä</translation>
     </message>
     <message>
-        <source>Show the Ethereum Future Core help message to get a list with possible Ethf command-line options</source>
-        <translation>Näytä Ethf Ydin apuviesti saadaksesi lista mahdollisista Ethf komentolinja komennoista.</translation>
+        <source>Show the ETHF Core help message to get a list with possible ETHF command-line options</source>
+        <translation>Näytä ETHF Ydin apuviesti saadaksesi lista mahdollisista ETHF komentolinja komennoista.</translation>
     </message>
     <message>
-        <source>Ethereum Future Core client</source>
-        <translation>Ethf Ydin asiakasohjelma</translation>
+        <source>ETHF Core client</source>
+        <translation>ETHF Ydin asiakasohjelma</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -934,8 +934,8 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethf Ydin</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Ydin</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -953,12 +953,12 @@ Syötä salausavain laatikon keskelle. Paina salaa tuottaaksesi salatun yksityis
         <translation>Tervetuloa</translation>
     </message>
     <message>
-        <source>Welcome to Ethereum Future Core.</source>
-        <translation>Tervetuloa Ethf Ytimeen.</translation>
+        <source>Welcome to ETHF Core.</source>
+        <translation>Tervetuloa ETHF Ytimeen.</translation>
     </message>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethf Ydin</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Ydin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1135,32 +1135,32 @@ Please check the address and try again.</source>
         <translation>Valitse yksityisyyden taso.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 ETHF</source>
-        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 1000 Ethf</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 ETHF</source>
+        <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 ETHF</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 ETHF</source>
-        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 1000 Ethf</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 ETHF</source>
+        <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 ETHF</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Käytä 16 erillistä masternodea</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 ETHF to anonymize 1000 ETHF</source>
-        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 ETHF anonymoidaksesi 1000 Ethf</translation>
+        <source>This option is the quickest and will cost about ~0.025 ETHF to anonymize 10000 ETHF</source>
+        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 ETHF anonymoidaksesi 10000 ETHF</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 ETHF to anonymize 1000 ETHF</source>
-        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 Ethf anonymoidaksesi 1000 Ethf</translation>
+        <source>This option is moderately fast and will cost about 0.05 ETHF to anonymize 10000 ETHF</source>
+        <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 ETHF anonymoidaksesi 10000 ETHF</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Tämä on hitain ja turvallisin vaihtoehto. Täydesti anonymisoiminen ei maksa mitään.</translation>
     </message>
     <message>
-        <source>0.1 ETHF per 1000 ETHF you anonymize.</source>
-        <translation>0.1 per 1000 Ethf, jotka anonymisoit.</translation>
+        <source>0.1 ETHF per 10000 ETHF you anonymize.</source>
+        <translation>0.1 per 10000 ETHF, jotka anonymisoit.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1209,16 +1209,16 @@ Please check the address and try again.</source>
         <translation>Ekspertti</translation>
     </message>
     <message>
-        <source>Automatically start Ethf after logging in to the system.</source>
-        <translation>Automaattisesti käynnistä Ethf kun kirjaudut sisään.</translation>
+        <source>Automatically start ETHF after logging in to the system.</source>
+        <translation>Automaattisesti käynnistä ETHF kun kirjaudut sisään.</translation>
     </message>
     <message>
-        <source>&amp;Start Ethf on system login</source>
-        <translation>&amp;Aloita Ethf järjestelmän kirjautumisessa</translation>
+        <source>&amp;Start ETHF on system login</source>
+        <translation>&amp;Aloita ETHF järjestelmän kirjautumisessa</translation>
     </message>
     <message>
-        <source>Amount of Ethf to keep anonymized</source>
-        <translation>Ethf määrä joka pidetään anonymisoituna</translation>
+        <source>Amount of ETHF to keep anonymized</source>
+        <translation>ETHF määrä joka pidetään anonymisoituna</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
@@ -1237,12 +1237,12 @@ Please check the address and try again.</source>
         <translation>&amp;Verkko</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Ethf.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting ETHF.</source>
         <translation>Käyttöliittymän kielen voi säätää täällä. Tämä asetus tulee voimaan uudelleenkäynnistettyäsi lompakon.</translation>
     </message>
     <message>
-        <source>Connect to the Ethf network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Ethf verkkoon SOCKS5 proxyn kautta</translation>
+        <source>Connect to the ETHF network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä ETHF verkkoon SOCKS5 proxyn kautta</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1475,8 +1475,8 @@ Please check the address and try again.</source>
         <translation>Lohko ketju</translation>
     </message>
     <message>
-        <source>Open the Ethf debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Avaa Ethf debug loki nykyisestä sijainnista. Tämä voi kestää muutaman sekunnin suurille lokeille</translation>
+        <source>Open the ETHF debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Avaa ETHF debug loki nykyisestä sijainnista. Tämä voi kestää muutaman sekunnin suurille lokeille</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -1587,8 +1587,8 @@ Please check the address and try again.</source>
         <translation>Ulos:</translation>
     </message>
     <message>
-        <source>Welcome to the Ethf RPC console.</source>
-        <translation>Tervetuloa Ethf RPC konsoliin.</translation>
+        <source>Welcome to the ETHF RPC console.</source>
+        <translation>Tervetuloa ETHF RPC konsoliin.</translation>
     </message>
     <message>
         <source>never</source>
@@ -1630,12 +1630,12 @@ Please check the address and try again.</source>
         <translation>Vaihtoehtoinen nimike uudelle vastaanottavalle osoitteelle</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Ethf network.</source>
-        <translation>Vaihtoehtoinen viesti joka liitetään maksupyyntöön, joka näytetään kun pyyntö avataan. Huomio: Viestiä ei lähetetä maksun mukana Ethf verkolle.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the ETHF network.</source>
+        <translation>Vaihtoehtoinen viesti joka liitetään maksupyyntöön, joka näytetään kun pyyntö avataan. Huomio: Viestiä ei lähetetä maksun mukana ETHF verkolle.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Ethf network.</source>
-        <translation>Vaihtoehtoinen viesti, joka liitetään maksupyyntöö, joka näytetään kun pyyntö avataan. &lt;br&gt; Huomio: Tätä viestiä ei lähetetä maksun mukana Ethf  verkolle.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the ETHF network.</source>
+        <translation>Vaihtoehtoinen viesti, joka liitetään maksupyyntöö, joka näytetään kun pyyntö avataan. &lt;br&gt; Huomio: Tätä viestiä ei lähetetä maksun mukana ETHF  verkolle.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -1919,8 +1919,8 @@ Please check the address and try again.</source>
         <translation>käyttää</translation>
     </message>
     <message>
-        <source>Warning: Invalid Ethf address</source>
-        <translation>Varoitus: Virheellinen Ethf osoite</translation>
+        <source>Warning: Invalid ETHF address</source>
+        <translation>Varoitus: Virheellinen ETHF osoite</translation>
     </message>
     <message>
         <source>Are you sure you want to send?</source>
@@ -1966,8 +1966,8 @@ Please check the address and try again.</source>
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The Ethf address to send the payment to</source>
-        <translation>Ethf osoite johon maksu lähetetään</translation>
+        <source>The ETHF address to send the payment to</source>
+        <translation>ETHF osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2009,8 +2009,8 @@ Please check the address and try again.</source>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Ethereum Future Core is shutting down...</source>
-        <translation>Ethf core sammuu...</translation>
+        <source>ETHF Core is shutting down...</source>
+        <translation>ETHF core sammuu...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2028,8 +2028,8 @@ Please check the address and try again.</source>
         <translation>Voit allekirjoittaa viestejä osoitteillasi todistaaksesi, että omistat ne. Ole varovainen ettet allekirjoita mitään kummallista, sillä kalasteluyritykset saattavat yrittää huijata sinut luovuttamaan tietoja. Allekirjoita vain täysin yksityiskohtaisia sanomia, jotka hyväksyt.</translation>
     </message>
     <message>
-        <source>The Ethf address to sign the message with</source>
-        <translation>Ethf osoite, jolla viesti allekirjoitetaan</translation>
+        <source>The ETHF address to sign the message with</source>
+        <translation>ETHF osoite, jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2060,16 +2060,16 @@ Please check the address and try again.</source>
         <translation>Kopioi nykyinen allekirjoitus järjestelmän leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ethf address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Ethf osoitteen</translation>
+        <source>Sign the message to prove you own this ETHF address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän ETHF osoitteen</translation>
     </message>
     <message>
-        <source>The Ethf address the message was signed with</source>
-        <translation>Ethf osoite, jolla viesti allekirjoitettiin</translation>
+        <source>The ETHF address the message was signed with</source>
+        <translation>ETHF osoite, jolla viesti allekirjoitettiin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ethf address</source>
-        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla Ethf osoitteella.</translation>
+        <source>Verify the message to ensure it was signed with the specified ETHF address</source>
+        <translation>Vahvista että viesti on allekirjoitettu kyseessä olevalla ETHF osoitteella.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2151,8 +2151,8 @@ Please check the address and try again.</source>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Ethereum Future Core</source>
-        <translation>Ethf Ydin</translation>
+        <source>ETHF Core</source>
+        <translation>ETHF Ydin</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2167,8 +2167,8 @@ Please check the address and try again.</source>
         <translation>Dash Core kehittäjät</translation>
     </message>
     <message>
-        <source>The Ethereum Future Core developers</source>
-        <translation>Ethf core kehittäjät</translation>
+        <source>The ETHF Core developers</source>
+        <translation>ETHF core kehittäjät</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2471,7 +2471,7 @@ Please check the address and try again.</source>
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>ethf-core</name>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
         <translation>Varoitus: Verkko ei näytä olevan samaa mieltä! Jotkin mainaajat saattavat kokea ongelmia.</translation>
@@ -2521,8 +2521,8 @@ Please check the address and try again.</source>
         <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko korruptoitunut</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Ethereum Future Core</source>
-        <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko vaatii uudemman version Ethereum Future Coresta</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of ETHF Core</source>
+        <translation>Virhe ladattaessa wallet.dat tiedostoa: Lompakko vaatii uudemman version ETHF Coresta</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>

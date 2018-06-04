@@ -30,6 +30,9 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast)
     if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || BlockLastSolved->nHeight < PastBlocksMin) {
         return Params().ProofOfWorkLimit().GetCompact();
     }
+	if ((BlockLastSolved->nHeight >= 57600) && (BlockLastSolved->nHeight < 58560)) { //1 day min diff POW for restart chain
+		return Params().ProofOfWorkLimit().GetCompact();
+	}
 
     if (pindexLast->nHeight > Params().LAST_POW_BLOCK()) {
         uint256 bnTargetLimit = (~uint256(0) >> 24);
@@ -88,7 +91,7 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast)
 
     uint256 bnNew(PastDifficultyAverage);
 
-    int64_t _nTargetTimespan = CountBlocks * (pindexLast->nHeight > 250 ? Params().TargetSpacing() : Params().TargetSpacingSlowLaunch());
+    int64_t _nTargetTimespan = CountBlocks * (pindexLast->nHeight > 250 ? Params().TargetSpacing() : 5 * 90); 
 
     if (nActualTimespan < _nTargetTimespan / 3)
         nActualTimespan = _nTargetTimespan / 3;
@@ -105,7 +108,8 @@ unsigned int static DarkGravityWave(const CBlockIndex* pindexLast)
 
     return bnNew.GetCompact();	
 }
-	
+
+
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader* pblock)
 {
 	return DarkGravityWave(pindexLast);

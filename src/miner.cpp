@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Ethf developers
+// Copyright (c) 2017-2018 The ETHF developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -31,7 +31,7 @@ using namespace std;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// EthfMiner
+// ETHFMiner
 //
 
 //
@@ -97,7 +97,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
 
     // Create new block
     auto_ptr<CBlockTemplate> pblocktemplate(new CBlockTemplate());
-    if (!pblocktemplate.get())
+    if (!pblocktemplate.get()) 
         return NULL;
     CBlock* pblock = &pblocktemplate->block; // pointer for convenience
 
@@ -138,6 +138,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             nLastCoinStakeSearchInterval = nSearchTime - nLastCoinStakeSearchTime;
             nLastCoinStakeSearchTime = nSearchTime;
         }
+		
 
         if (!fStakeFound)
             return NULL;
@@ -348,12 +349,12 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
 
 
         // Compute final coinbase transaction.
-		txNew.vin[0].scriptSig = CScript() << nHeight << OP_0;
-        
+	    pblock->vtx[0].vin[0].scriptSig = CScript() << nHeight << OP_0;
         if (!fProofOfStake) {
             pblock->vtx[0] = txNew;
             pblocktemplate->vTxFees[0] = -nFees;
         }
+
 
         // Fill in header
         pblock->hashPrevBlock = pindexPrev->GetBlockHash();
@@ -363,11 +364,8 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         pblock->nNonce = 0;
         pblocktemplate->vTxSigOps[0] = GetLegacySigOpCount(pblock->vtx[0]);
 
-        CValidationState state;
-        if (!TestBlockValidity(state, *pblock, pindexPrev, false, false)) {
-            LogPrintf("CreateNewBlock() : TestBlockValidity failed\n");
-            return NULL;
-        }
+ 
+   		CValidationState state;
     }
 
     return pblocktemplate.release();
@@ -418,7 +416,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != chainActive.Tip()->GetBlockHash())
-            return error("EthfMiner : generated block is stale");
+            return error("ETHFMiner : generated block is stale");
     }
 
     // Remove key from key pool
@@ -433,7 +431,7 @@ bool ProcessBlockFound(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     // Process this block the same as if we had received it from another node
     CValidationState state;
     if (!ProcessNewBlock(state, NULL, pblock))
-        return error("EthfMiner : ProcessNewBlock, block not accepted");
+        return error("ETHFMiner : ProcessNewBlock, block not accepted");
 
     return true;
 }
@@ -444,7 +442,7 @@ bool fGenerateBitcoins = false;
 
 void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 {
-    LogPrintf("EthfMiner started\n");
+    LogPrintf("ETHFMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
     RenameThread("ethf-miner");
 
@@ -469,7 +467,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
                 continue;
             }
 
-            while (vNodes.empty() || pwallet->IsLocked() || !fMintableCoins || nReserveBalance >= pwallet->GetBalance() || !masternodeSync.IsSynced()) {
+            while (chainActive.Tip()->nTime < 1471482000 || vNodes.empty() || pwallet->IsLocked() || !fMintableCoins || nReserveBalance >= pwallet->GetBalance() || !masternodeSync.IsSynced()) {
                 nLastCoinStakeSearchInterval = 0;
                 MilliSleep(5000);
                 if (!fGenerateBitcoins && !fProofOfStake)
@@ -494,9 +492,10 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
         if (!pindexPrev)
             continue;
 
-        auto_ptr<CBlockTemplate> pblocktemplate(CreateNewBlockWithKey(reservekey, pwallet, fProofOfStake));
-        if (!pblocktemplate.get())
+     	auto_ptr<CBlockTemplate> pblocktemplate(CreateNewBlockWithKey(reservekey, pwallet, fProofOfStake));
+   		if (!pblocktemplate.get()) { 
             continue;
+		}
 
         CBlock* pblock = &pblocktemplate->block;
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
@@ -518,7 +517,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
             continue;
         }
 
-        LogPrintf("Running EthfMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
+        LogPrintf("Running ETHFMiner with %u transactions in block (%u bytes)\n", pblock->vtx.size(),
             ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
